@@ -19,75 +19,59 @@
     <meta name="keywords" content="world of tanks heat, tank database, heat labs, armor profiles, tank comparison, map information, tank statistics, community guides, wot heat, game news">
     <!-- Website Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "HEAT Labs",
-      "url": "https://heatlabs.net",
-      "logo": "https://cdn5.heatlabs.net/logo/logo.webp",
-      "sameAs": [
-        "https://changelog.heatlabs.net",
-        "https://bot.heatlabs.net",
-        "https://statistics.heatlabs.net",
-        "https://status.heatlabs.net",
-        "https://social.heatlabs.net",
-        "https://discord.heatlabs.net",
-        "https://x.com/HEAT_Labs",
-        "https://github.com/HEATLabs",
-        "https://www.youtube.com/@HEATLabs-Official",
-        "https://www.tiktok.com/@heatlabs_official",
-        "https://www.twitch.tv/HEATLabs"
-      ],
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "Contact Form",
-        "url": "https://heatlabs.net/resources/contact-us"
-      }]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HEAT Labs",
+        "url": "https://heatlabs.net",
+        "logo": "https://cdn5.heatlabs.net/logo/logo.webp",
+        "sameAs": ["https://changelog.heatlabs.net", "https://bot.heatlabs.net", "https://statistics.heatlabs.net", "https://status.heatlabs.net", "https://social.heatlabs.net", "https://discord.heatlabs.net", "https://x.com/HEAT_Labs", "https://github.com/HEATLabs", "https://www.youtube.com/@HEATLabs-Official", "https://www.tiktok.com/@heatlabs_official", "https://www.twitch.tv/HEATLabs"],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "Contact Form",
+          "url": "https://heatlabs.net/resources/contact-us"
+        }]
+      }
     </script>
     <!-- WebPage Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Tank Roulette - HEAT Labs",
-      "description": "World of Tanks: HEAT Tank Roulette - Random tank selector for varied gameplay. Discover new vehicles and break your routine with our fun tank picker tool.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "HEAT Labs",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://cdn5.heatlabs.net/logo/logo.webp"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Tank Roulette - HEAT Labs",
+        "description": "World of Tanks: HEAT Tank Roulette - Random tank selector for varied gameplay. Discover new vehicles and break your routine with our fun tank picker tool.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HEAT Labs",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn5.heatlabs.net/logo/logo.webp"
+          }
         }
       }
-    }
     </script>
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
           "item": "https://heatlabs.net/"
-        },
-        {
+        }, {
           "@type": "ListItem",
           "position": 2,
           "name": "Playground",
           "item": "https://heatlabs.net/playground"
-        },
-        {
+        }, {
           "@type": "ListItem",
           "position": 3,
           "name": "Tank Roulette",
           "item": "https://games.heatlabs.net/games/roulette"
-        }
-      ]
-    }
+        }]
+      }
     </script>
     <!-- Canonical URL -->
     <link rel="canonical" href="https://games.heatlabs.net/games/roulette">
@@ -180,539 +164,520 @@
     <meta name="twitter:image:alt" content="HEAT Labs - Your one-stop solution for comprehensive statistics insights and guides for World of Tanks: HEAT">
   </head>
   <body>
-      <!-- Roulette Section -->
-      <section id="main" class="section">
-        <div class="container mx-auto px-4">
-          <div class="roulette-container">
-            <h2 class="section-title">Random Tank Selector</h2>
-            <p class="text-center mb-8 max-w-2xl mx-auto">Can't decide which tank to play? Let fate choose for you!</p>
-            <div class="roulette-wrapper">
-              <div class="roulette-arrow"></div>
-              <div class="roulette-wheel" id="rouletteWheel"></div>
-            </div>
-            <div class="result-container" id="resultContainer">
-              <div class="result-card hidden" id="resultCard">
-                <div class="result-image-container">
-                  <img id="resultImage" src="" alt="Selected Tank" class="result-image">
-                </div>
-                <div class="result-info">
-                  <h3 id="resultName"></h3>
-                  <div class="result-meta">
-                    <span id="resultNation"></span>
-                    <span id="resultType"></span>
-                  </div>
-                  <a href="#" id="resultLink" class="btn-accent">
-                    <i class="fas fa-chart-bar mr-2"></i>View Stats </a>
-                </div>
+    <!-- Roulette Section -->
+    <section id="main" class="section">
+      <div class="container mx-auto px-4">
+        <div class="roulette-container">
+          <h2 class="section-title">Random Tank Selector</h2>
+          <p class="text-center mb-8 max-w-2xl mx-auto">Can't decide which tank to play? Let fate choose for you!</p>
+          <div class="roulette-wrapper">
+            <div class="roulette-arrow"></div>
+            <div class="roulette-wheel" id="rouletteWheel"></div>
+          </div>
+          <div class="result-container" id="resultContainer">
+            <div class="result-card hidden" id="resultCard">
+              <div class="result-image-container">
+                <img id="resultImage" src="" alt="Selected Tank" class="result-image">
               </div>
-            </div>
-            <div class="spin-container">
-              <button class="btn-accent spin-button" id="spinButton">
-                <i class="fas fa-random mr-2"></i>Spin the Wheel </button>
-              <div class="spin-counter" id="spinCounter"> Spins: <span id="spinCount">0</span>
+              <div class="result-info">
+                <h3 id="resultName"></h3>
+                <div class="result-meta">
+                  <span id="resultNation"></span>
+                  <span id="resultType"></span>
+                </div>
+                <a href="#" id="resultLink" class="btn-accent">
+                  <i class="fas fa-chart-bar mr-2"></i>View Stats </a>
               </div>
             </div>
           </div>
+          <div class="spin-container">
+            <button class="btn-accent spin-button" id="spinButton">
+              <i class="fas fa-random mr-2"></i>Spin the Wheel </button>
+            <div class="spin-counter" id="spinCounter"> Spins: <span id="spinCount">0</span>
+            </div>
+          </div>
         </div>
-      </section>
-      <!-- Roulette Prizes Section -->
-      <section class="section prizes-section">
-        <div class="container mx-auto px-4">
-          <h2 class="section-title">Roulette Prizes & Chances</h2>
-          <p class="text-center mb-8 max-w-2xl mx-auto">Here's what you could win (or not win) in the Tank Roulette!</p>
-          <div class="prizes-grid">
-            <!-- Special Prize (joke) -->
-            <div class="prize-card special-prize">
-              <div class="prize-image-container">
-                <img src="https://cdn6.heatlabs.net/roulette/special.webp" alt="Special Prize" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>Special Prize</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> Mystery </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Legendary </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">0.0001%</span>
-                </div>
-              </div>
+      </div>
+    </section>
+    <!-- Roulette Prizes Section -->
+    <section class="section prizes-section">
+      <div class="container mx-auto px-4">
+        <h2 class="section-title">Roulette Prizes & Chances</h2>
+        <p class="text-center mb-8 max-w-2xl mx-auto">Here's what you could win (or not win) in the Tank Roulette!</p>
+        <div class="prizes-grid">
+          <!-- Special Prize (joke) -->
+          <div class="prize-card special-prize">
+            <div class="prize-image-container">
+              <img src="https://cdn6.heatlabs.net/roulette/special.webp" alt="Special Prize" class="prize-image">
             </div>
-            <!-- All Regular Tanks -->
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/agds/icon_agds.webp" alt="AGDS" class="prize-image">
+            <div class="prize-info">
+              <h3>Special Prize</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> Mystery </span>
+                <span>
+                  <i class="fas fa-tag"></i> Legendary </span>
               </div>
-              <div class="prize-info">
-                <h3>AGDS</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Marksman </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">4.2%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/alvt/icon_alvt.webp" alt="ALVT" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>ALVT</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">4.1%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/bat-4m/icon_bat-4m.webp" alt="BAT-4M" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>BAT-4M</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USSR </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Defender </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">4.0%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/fv4030x/icon_fv4030x.webp" alt="FV 4030/X" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>FV 4030/X</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> UK </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">4.0%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/hstv-l/icon_hstv-l.webp" alt="HSTV-L" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>HSTV-L</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Assault </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.9%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/leopard-1a1b/icon_leopard-1a1b.webp" alt="Leopard 1A1" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>Leopard 1A1</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> Germany </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Marksman </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.9%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/leopard-1a6a1/icon_leopard-1a6a1.webp" alt="Leopard 1A6" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>Leopard 1A6</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> Germany </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Marksman </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.8%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/leopard-2k14/icon_leopard-2k14.webp" alt="Leopard 2K" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>Leopard 2K</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> Germany </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Assault </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.8%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/leopard-2fk/icon_leopard-2fk.webp" alt="Leopard 2K ATGM" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>Leopard 2K ATGM</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> Germany </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Marksman </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.7%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/m1-railgun/icon_m1-railgun.webp" alt="M1 Railgun" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>M1 Railgun</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.7%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/m1e1/icon_m1e1.webp" alt="M1E1" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>M1E1</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Defender </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.6%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/m3a1-bradley/icon_m3a1-bradley.webp" alt="M3A1 Bradley" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>M3 Bradley</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.6%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/m60e2/icon_m60e2.webp" alt="M60A1" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>M60A1</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Defender </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.5%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/m60a3e2/icon_m60a3e2.webp" alt="M60A3" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>M60A3</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Assault </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.5%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/xm551/icon_xm551.webp" alt="M551" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>M551</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.4%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/object-279/icon_object-279.webp" alt="Object 279" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>Object 279</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USSR </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.4%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/object-287/icon_object-287.webp" alt="Object 287" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>Object 287</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USSR </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.3%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/ptz89c/icon_ptz89c.webp" alt="PTZ-89" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>PTZ-89</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> China </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.3%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/t-62av/icon_t-62av.webp" alt="T-62A" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>T-62A</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USSR </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Assault </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.2%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/t-64a/icon_t-64a.webp" alt="T-64A" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>T-64A</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USSR </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.2%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/t-62ms/icon_t-62ms.webp" alt="T-62MS" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>T-64B</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USSR </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.1%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/t-72au/icon_t-72au.webp" alt="T-72AU" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>T-72A</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USSR </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.1%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/t-72b/icon_t-72b.webp" alt="T-72B" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>T-72B</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USSR </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.0%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/xm1-90/icon_xm1-90.webp" alt="XM1-90" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>XM1-90</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Assault </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">3.0%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/xm1-v/icon_xm1-v.webp" alt="XM1-V" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>XM1-V</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Defender </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">2.9%</span>
-                </div>
-              </div>
-            </div>
-            <div class="prize-card">
-              <div class="prize-image-container">
-                <img src="https://cdn7.heatlabs.net/tanks/xm808-twister/icon_xm808-twister.webp" alt="XM808 Twister" class="prize-image">
-              </div>
-              <div class="prize-info">
-                <h3>XM808 Twister</h3>
-                <div class="prize-meta">
-                  <span>
-                    <i class="fas fa-flag"></i> USA </span>
-                  <span>
-                    <i class="fas fa-tag"></i> Unknown </span>
-                </div>
-                <div class="prize-chance">
-                  <span class="chance-label">Chance:</span>
-                  <span class="chance-value">2.9%</span>
-                </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">0.0001%</span>
               </div>
             </div>
           </div>
-          <p class="text-center text-sm text-gray-500 mt-8">* There are no actual chances, this is fully random, and you won't ever get the special prize. These percentages are just for fun.</p>
+          <!-- All Regular Tanks -->
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/agds/icon_agds.webp" alt="AGDS" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>AGDS</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Marksman </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">4.2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/alvt/icon_alvt.webp" alt="ALVT" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>ALVT</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">4.1%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/bat-4m/icon_bat-4m.webp" alt="BAT-4M" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>BAT-4M</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USSR </span>
+                <span>
+                  <i class="fas fa-tag"></i> Defender </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">4.0%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/fv4030x/icon_fv4030x.webp" alt="FV 4030/X" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>FV 4030/X</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> UK </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">4.0%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/hstv-l/icon_hstv-l.webp" alt="HSTV-L" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>HSTV-L</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Assault </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.9%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/leopard-1a1b/icon_leopard-1a1b.webp" alt="Leopard 1A1" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>Leopard 1A1</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> Germany </span>
+                <span>
+                  <i class="fas fa-tag"></i> Marksman </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.9%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/leopard-1a6a1/icon_leopard-1a6a1.webp" alt="Leopard 1A6" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>Leopard 1A6</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> Germany </span>
+                <span>
+                  <i class="fas fa-tag"></i> Marksman </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.8%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/leopard-2k14/icon_leopard-2k14.webp" alt="Leopard 2K" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>Leopard 2K</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> Germany </span>
+                <span>
+                  <i class="fas fa-tag"></i> Assault </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.8%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/leopard-2fk/icon_leopard-2fk.webp" alt="Leopard 2K ATGM" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>Leopard 2K ATGM</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> Germany </span>
+                <span>
+                  <i class="fas fa-tag"></i> Marksman </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.7%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/m1-railgun/icon_m1-railgun.webp" alt="M1 Railgun" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>M1 Railgun</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.7%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/m1e1/icon_m1e1.webp" alt="M1E1" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>M1E1</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Defender </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.6%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/m3a1-bradley/icon_m3a1-bradley.webp" alt="M3A1 Bradley" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>M3 Bradley</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.6%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/m60e2/icon_m60e2.webp" alt="M60A1" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>M60A1</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Defender </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.5%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/m60a3e2/icon_m60a3e2.webp" alt="M60A3" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>M60A3</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Assault </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.5%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/xm551/icon_xm551.webp" alt="M551" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>M551</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USA </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.4%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/object-279/icon_object-279.webp" alt="Object 279" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>Object 279</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USSR </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.4%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/object-287/icon_object-287.webp" alt="Object 287" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>Object 287</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USSR </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.3%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/ptz89c/icon_ptz89c.webp" alt="PTZ-89" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>PTZ-89</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> China </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.3%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/t-62av/icon_t-62av.webp" alt="T-62A" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>T-62A</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USSR </span>
+                <span>
+                  <i class="fas fa-tag"></i> Assault </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/t-64a/icon_t-64a.webp" alt="T-64A" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>T-64A</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USSR </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/t-62ms/icon_t-62ms.webp" alt="T-62MS" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>T-64B</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USSR </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.1%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/t-72au/icon_t-72au.webp" alt="T-72AU" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>T-72A</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USSR </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.1%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/t-72b/icon_t-72b.webp" alt="T-72B" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>T-72B</h3>
+              <div class="prize-meta">
+                <span>
+                  <i class="fas fa-flag"></i> USSR </span>
+                <span>
+                  <i class="fas fa-tag"></i> Unknown </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.0%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/xm1-90/icon_xm1-90.webp" alt="XM1-90" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>XM1-90</h3>
+              <div class="prize-meta">
+                <span>undefined<i class="fas fa-flag"></i> USA </span>
+                <span>undefined<i class="fas fa-tag"></i> Assault </span>
+              </div>
+              <div class="prize-chance">
+                <span class="chance-label">Chance:</span>
+                <span class="chance-value">3.0%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/xm1-v/icon_xm1-v.webp" alt="XM1-V" class="prize-image">
+            </div>
+            <div class="prize-info">
+              <h3>XM1-V</h3>
+              <div class="prize-meta">undefined<span>undefined<i class="fas fa-flag"></i> USA undefined</span>undefined<span>undefined<i class="fas fa-tag"></i> Defender undefined</span>
+              </div>
+              <div class="prize-chance">undefined<span class="chance-label">Chance:</span>undefined<span class="chance-value">2.9%</span>
+              </div>
+            </div>
+          </div>
+          <div class="prize-card">
+            <div class="prize-image-container">
+              <img src="https://cdn7.heatlabs.net/tanks/xm808-twister/icon_xm808-twister.webp" alt="XM808 Twister" class="prize-image">
+            </div>
+            <div class="prize-info">undefined<h3>XM808 Twister</h3>undefined<div class="prize-meta">undefined<span>undefined<i class="fas fa-flag"></i> USA undefined</span>undefined<span>undefined<i class="fas fa-tag"></i> Unknown undefined</span>undefined</div>undefined<div class="prize-chance">undefined<span class="chance-label">Chance:</span>undefined<span class="chance-value">2.9%</span>undefined</div>
+            </div>
+          </div>
         </div>
-      </section>
+        <p class="text-center text-sm text-gray-500 mt-8">* There are no actual chances, this is fully random, and you won't ever get the special prize. These percentages are just for fun.</p>
+      </div>
+    </section>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/misc.js"></script>
     <script src="../assets/js/modules/image-protection.js"></script>

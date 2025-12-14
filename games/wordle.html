@@ -19,75 +19,59 @@
     <meta name="keywords" content="world of tanks heat, tank database, heat labs, armor profiles, tank comparison, map information, tank statistics, community guides, wot heat, game news">
     <!-- Website Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "HEAT Labs",
-      "url": "https://heatlabs.net",
-      "logo": "https://cdn5.heatlabs.net/logo/logo.webp",
-      "sameAs": [
-        "https://changelog.heatlabs.net",
-        "https://bot.heatlabs.net",
-        "https://statistics.heatlabs.net",
-        "https://status.heatlabs.net",
-        "https://social.heatlabs.net",
-        "https://discord.heatlabs.net",
-        "https://x.com/HEAT_Labs",
-        "https://github.com/HEATLabs",
-        "https://www.youtube.com/@HEATLabs-Official",
-        "https://www.tiktok.com/@heatlabs_official",
-        "https://www.twitch.tv/HEATLabs"
-      ],
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "Contact Form",
-        "url": "https://heatlabs.net/resources/contact-us"
-      }]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HEAT Labs",
+        "url": "https://heatlabs.net",
+        "logo": "https://cdn5.heatlabs.net/logo/logo.webp",
+        "sameAs": ["https://changelog.heatlabs.net", "https://bot.heatlabs.net", "https://statistics.heatlabs.net", "https://status.heatlabs.net", "https://social.heatlabs.net", "https://discord.heatlabs.net", "https://x.com/HEAT_Labs", "https://github.com/HEATLabs", "https://www.youtube.com/@HEATLabs-Official", "https://www.tiktok.com/@heatlabs_official", "https://www.twitch.tv/HEATLabs"],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "Contact Form",
+          "url": "https://heatlabs.net/resources/contact-us"
+        }]
+      }
     </script>
     <!-- WebPage Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Wordle - HEAT Labs",
-      "description": "Wordle game based on World of Tanks: HEAT",
-      "publisher": {
-        "@type": "Organization",
-        "name": "HEAT Labs",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://cdn5.heatlabs.net/logo/logo.webp"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Wordle - HEAT Labs",
+        "description": "Wordle game based on World of Tanks: HEAT",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HEAT Labs",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn5.heatlabs.net/logo/logo.webp"
+          }
         }
       }
-    }
     </script>
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
           "item": "https://heatlabs.net/"
-        },
-        {
+        }, {
           "@type": "ListItem",
           "position": 2,
           "name": "Playground",
           "item": "https://heatlabs.net/playground"
-        },
-        {
+        }, {
           "@type": "ListItem",
           "position": 3,
           "name": "Wordle Game",
           "item": "https://games.heatlabs.net/games/wordle"
-        }
-      ]
-    }
+        }]
+      }
     </script>
     <!-- Canonical URL -->
     <link rel="canonical" href="https://games.heatlabs.net/games/wordle">
@@ -180,77 +164,77 @@
     <meta name="twitter:image:alt" content="HEAT Labs - Your one-stop solution for comprehensive statistics insights and guides for World of Tanks: HEAT">
   </head>
   <body>
-      <!-- Main Content -->
-      <section id="main" class="section">
-        <div class="container mx-auto px-4">
-          <!-- Wordle Game -->
-          <div id="wordleGame" class="wordle-game">
-            <!-- Header -->
-            <div class="wordle-header">
-              <h2 class="wordle-title">Guess the word!</h2>
-              <p class="wordle-subtitle">The words are generally connected to the game and its extended lore.</p>
-              <!-- Stats -->
-              <div class="wordle-stats">
-                <div class="stat-item">
-                  <div class="stat-value" id="currentStreak">0</div>
-                  <div class="stat-label">Current Streak</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-value" id="maxStreak">0</div>
-                  <div class="stat-label">Max Streak</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-value" id="gamesPlayed">0</div>
-                  <div class="stat-label">Games Played</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-value" id="gamesWon">0</div>
-                  <div class="stat-label">Games Won</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-value" id="gamesLost">0</div>
-                  <div class="stat-label">Games Lost</div>
-                </div>
-                <div class="stat-item">
-                  <div class="stat-value" id="winPercentage">0%</div>
-                  <div class="stat-label">Current Win Rate</div>
-                </div>
+    <!-- Main Content -->
+    <section id="main" class="section">
+      <div class="container mx-auto px-4">
+        <!-- Wordle Game -->
+        <div id="wordleGame" class="wordle-game">
+          <!-- Header -->
+          <div class="wordle-header">
+            <h2 class="wordle-title">Guess the word!</h2>
+            <p class="wordle-subtitle">The words are generally connected to the game and its extended lore.</p>
+            <!-- Stats -->
+            <div class="wordle-stats">
+              <div class="stat-item">
+                <div class="stat-value" id="currentStreak">0</div>
+                <div class="stat-label">Current Streak</div>
               </div>
-            </div>
-            <!-- Game Content -->
-            <div class="wordle-content">
-              <!-- Game Board -->
-              <div class="wordle-board-container">
-                <div class="wordle-board" id="wordleBoard">
-                  <!-- Board will be dynamically generated based on word length -->
-                </div>
+              <div class="stat-item">
+                <div class="stat-value" id="maxStreak">0</div>
+                <div class="stat-label">Max Streak</div>
               </div>
-              <!-- Input Area -->
-              <div class="wordle-input-container">
-                <div class="wordle-input">
-                  <input type="text" id="wordleInput" class="wordle-input-field" maxlength="15" placeholder="Enter your guess">
-                </div>
-                <!-- Buttons -->
-                <div class="wordle-buttons">
-                  <button id="submitGuess" class="wordle-button submit-button">
-                    <i class="fas fa-paper-plane mr-2"></i> Submit Guess </button>
-                  <button id="newGame" class="wordle-button new-game-button">
-                    <i class="fas fa-redo mr-2"></i> New Game </button>
-                </div>
+              <div class="stat-item">
+                <div class="stat-value" id="gamesPlayed">0</div>
+                <div class="stat-label">Games Played</div>
               </div>
-            </div>
-            <!-- Message Modal -->
-            <div id="wordleModal" class="wordle-modal">
-              <div class="wordle-modal-content">
-                <div id="wordleModalIcon" class="wordle-modal-icon"></div>
-                <h3 id="wordleModalTitle" class="wordle-modal-title"></h3>
-                <p id="wordleModalMessage" class="wordle-modal-message"></p>
-                <button id="wordleModalClose" class="wordle-modal-close">Continue</button>
+              <div class="stat-item">
+                <div class="stat-value" id="gamesWon">0</div>
+                <div class="stat-label">Games Won</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value" id="gamesLost">0</div>
+                <div class="stat-label">Games Lost</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value" id="winPercentage">0%</div>
+                <div class="stat-label">Current Win Rate</div>
               </div>
             </div>
           </div>
+          <!-- Game Content -->
+          <div class="wordle-content">
+            <!-- Game Board -->
+            <div class="wordle-board-container">
+              <div class="wordle-board" id="wordleBoard">
+                <!-- Board will be dynamically generated based on word length -->
+              </div>
+            </div>
+            <!-- Input Area -->
+            <div class="wordle-input-container">
+              <div class="wordle-input">
+                <input type="text" id="wordleInput" class="wordle-input-field" maxlength="15" placeholder="Enter your guess">
+              </div>
+              <!-- Buttons -->
+              <div class="wordle-buttons">
+                <button id="submitGuess" class="wordle-button submit-button">
+                  <i class="fas fa-paper-plane mr-2"></i> Submit Guess </button>
+                <button id="newGame" class="wordle-button new-game-button">
+                  <i class="fas fa-redo mr-2"></i> New Game </button>
+              </div>
+            </div>
+          </div>
+          <!-- Message Modal -->
+          <div id="wordleModal" class="wordle-modal">
+            <div class="wordle-modal-content">
+              <div id="wordleModalIcon" class="wordle-modal-icon"></div>
+              <h3 id="wordleModalTitle" class="wordle-modal-title"></h3>
+              <p id="wordleModalMessage" class="wordle-modal-message"></p>
+              <button id="wordleModalClose" class="wordle-modal-close">Continue</button>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/misc.js"></script>
     <script src="../assets/js/modules/image-protection.js"></script>

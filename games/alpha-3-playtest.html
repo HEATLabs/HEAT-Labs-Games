@@ -19,75 +19,59 @@
     <meta name="keywords" content="world of tanks heat, tank database, heat labs, armor profiles, tank comparison, map information, tank statistics, community guides, wot heat, game news">
     <!-- Website Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "HEAT Labs",
-      "url": "https://heatlabs.net",
-      "logo": "https://cdn5.heatlabs.net/logo/logo.webp",
-      "sameAs": [
-        "https://changelog.heatlabs.net",
-        "https://bot.heatlabs.net",
-        "https://statistics.heatlabs.net",
-        "https://status.heatlabs.net",
-        "https://social.heatlabs.net",
-        "https://discord.heatlabs.net",
-        "https://x.com/HEAT_Labs",
-        "https://github.com/HEATLabs",
-        "https://www.youtube.com/@HEATLabs-Official",
-        "https://www.tiktok.com/@heatlabs_official",
-        "https://www.twitch.tv/HEATLabs"
-      ],
-      "contactPoint": [{
-        "@type": "ContactPoint",
-        "contactType": "Contact Form",
-        "url": "https://heatlabs.net/resources/contact-us"
-      }]
-    }
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "HEAT Labs",
+        "url": "https://heatlabs.net",
+        "logo": "https://cdn5.heatlabs.net/logo/logo.webp",
+        "sameAs": ["https://changelog.heatlabs.net", "https://bot.heatlabs.net", "https://statistics.heatlabs.net", "https://status.heatlabs.net", "https://social.heatlabs.net", "https://discord.heatlabs.net", "https://x.com/HEAT_Labs", "https://github.com/HEATLabs", "https://www.youtube.com/@HEATLabs-Official", "https://www.tiktok.com/@heatlabs_official", "https://www.twitch.tv/HEATLabs"],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "Contact Form",
+          "url": "https://heatlabs.net/resources/contact-us"
+        }]
+      }
     </script>
     <!-- WebPage Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Alpha 3 Playtest - HEAT Labs",
-      "description": "Alpha 3 Playtest - The ultimate World of Tanks: HEAT companion with tank stats, builds, tournament results, and strategy guides. Free community-driven resource for competitive tank warfare.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "HEAT Labs",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://cdn5.heatlabs.net/logo/logo.webp"
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Alpha 3 Playtest - HEAT Labs",
+        "description": "Alpha 3 Playtest - The ultimate World of Tanks: HEAT companion with tank stats, builds, tournament results, and strategy guides. Free community-driven resource for competitive tank warfare.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "HEAT Labs",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://cdn5.heatlabs.net/logo/logo.webp"
+          }
         }
       }
-    }
     </script>
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
           "item": "https://heatlabs.net/"
-        },
-        {
+        }, {
           "@type": "ListItem",
           "position": 2,
           "name": "Playground",
           "item": "https://heatlabs.net/playground"
-        },
-        {
+        }, {
           "@type": "ListItem",
           "position": 3,
           "name": "Alpha 3 Countdown",
           "item": "https://games.heatlabs.net/games/alpha-3-playtest"
-        }
-      ]
-    }
+        }]
+      }
     </script>
     <!-- Canonical URL -->
     <link rel="canonical" href="https://games.heatlabs.net/games/alpha-3-playtest">
@@ -186,25 +170,25 @@
     <meta name="twitter:image:alt" content="HEAT Labs - Your one-stop solution for comprehensive statistics insights and guides for World of Tanks: HEAT">
   </head>
   <body>
-      <main class="home-hero">
-        <div class="hero-overlay"></div>
-        <div class="countdown-container">
-          <h1 class="countdown-title" style="display: none;">World of Tanks: HEAT Alpha 3 Playtest</h1>
-          <p class="countdown-subtitle" style="display: none;">
-            <b>Soon™</b>
-          </p>
-          <div class="countdown-timer">
-            <div class="countdown-item">
-              <div class="countdown-value" id="seconds">00</div>
-            </div>
+    <main class="home-hero">
+      <div class="hero-overlay"></div>
+      <div class="countdown-container">
+        <h1 class="countdown-title" style="display: none;">World of Tanks: HEAT Alpha 3 Playtest</h1>
+        <p class="countdown-subtitle" style="display: none;">
+          <b>Soon™</b>
+        </p>
+        <div class="countdown-timer">
+          <div class="countdown-item">
+            <div class="countdown-value" id="seconds">00</div>
           </div>
         </div>
-      </main>
-      <!-- Notification Popup -->
-      <div class="notification-popup" id="speculationNotice">
-        <p>This countdown is speculative, created by the HEAT Labs Team based on the dates of the last two public alpha playtests, and is not an official announcement. The actual release date of World of Tanks: HEAT or its next public playtest has not yet been confirmed.</p>
-        <button class="close-btn" id="closeNotice">&times;</button>
       </div>
+    </main>
+    <!-- Notification Popup -->
+    <div class="notification-popup" id="speculationNotice">
+      <p>This countdown is speculative, created by the HEAT Labs Team based on the dates of the last two public alpha playtests, and is not an official announcement. The actual release date of World of Tanks: HEAT or its next public playtest has not yet been confirmed.</p>
+      <button class="close-btn" id="closeNotice">&times;</button>
+    </div>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/misc.js"></script>
     <script src="../assets/js/modules/global-hero.js"></script>
