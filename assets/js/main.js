@@ -1,7 +1,7 @@
 // Main JS for HEAT Labs
 document.addEventListener('DOMContentLoaded', function() {
     // Check maintenance mode first
-    fetch('https://raw.githubusercontent.com/HEATLabs/HEAT-Labs-Configs/refs/heads/main/maintenance.json')
+    fetch('../assets/configs/maintenance.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch maintenance data');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         initializeInteractiveElements();
 
         // Fetch website version data from GitHub
-        fetch('https://raw.githubusercontent.com/HEATLabs/HEAT-Labs-Configs/refs/heads/main/changelog.json')
+        fetch('../assets/configs/changelog.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch changelog data');
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
 
                 // Fetch game version data
-                fetch('https://raw.githubusercontent.com/HEATLabs/HEAT-Labs-Configs/refs/heads/main/game_builds.json')
+                fetch('../assets/configs/game_builds.json')
                     .then(response => {
                         if (!response.ok) {
                             throw new Error('Failed to fetch game data');
