@@ -70,9 +70,8 @@
 	src: url('fonts/RobotoMono-Medium.ttf') format('truetype');
 }
 
-html, body {
-    overflow: hidden;
-    height: 100%;
+html {
+	scroll-behavior: smooth;
 }
 
 :root {
@@ -246,7 +245,6 @@ body {
 	padding: 0;
 	transition: background-color var(--transition-speed), color var(--transition-speed);
 	min-height: 100vh;
-	overflow-x: hidden;
 }
 
 /* Theme Styles */
@@ -286,7 +284,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	transition: margin-left var(--transition-speed);
-	overflow: hidden;
 }
 
 /* Theme Toggle */
