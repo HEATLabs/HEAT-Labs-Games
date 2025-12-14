@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://games.heatlabs.net/site-data/sitemap.xml
