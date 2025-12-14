@@ -21,7 +21,6 @@
     <link rel="canonical" href="https://games.heatlabs.net/games/wordle">
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" href="../site-data/sitemap.xml">
-
     <!-- Main stylesheets -->
     <link rel="stylesheet" href="../assets/css/libraries/tailwind.css">
     <link rel="stylesheet" href="../assets/css/libraries/font-awesome/all.css">
@@ -88,77 +87,16 @@
     <meta name="twitter:image:alt" content="HEAT Labs - Your one-stop solution for comprehensive statistics insights and guides for World of Tanks: HEAT">
   </head>
   <body>
-    <!-- Main Content -->
-    <section id="main" class="section">
-      <div class="container mx-auto px-4">
-        <!-- Wordle Game -->
-        <div id="wordleGame" class="wordle-game">
-          <!-- Header -->
-          <div class="wordle-header">
-            <h2 class="wordle-title">Guess the word!</h2>
-            <p class="wordle-subtitle">The words are generally connected to the game and its extended lore.</p>
-            <!-- Stats -->
-            <div class="wordle-stats">
-              <div class="stat-item">
-                <div class="stat-value" id="currentStreak">0</div>
-                <div class="stat-label">Current Streak</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value" id="maxStreak">0</div>
-                <div class="stat-label">Max Streak</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value" id="gamesPlayed">0</div>
-                <div class="stat-label">Games Played</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value" id="gamesWon">0</div>
-                <div class="stat-label">Games Won</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value" id="gamesLost">0</div>
-                <div class="stat-label">Games Lost</div>
-              </div>
-              <div class="stat-item">
-                <div class="stat-value" id="winPercentage">0%</div>
-                <div class="stat-label">Current Win Rate</div>
-              </div>
-            </div>
-          </div>
-          <!-- Game Content -->
-          <div class="wordle-content">
-            <!-- Game Board -->
-            <div class="wordle-board-container">
-              <div class="wordle-board" id="wordleBoard">
-                <!-- Board will be dynamically generated based on word length -->
-              </div>
-            </div>
-            <!-- Input Area -->
-            <div class="wordle-input-container">
-              <div class="wordle-input">
-                <input type="text" id="wordleInput" class="wordle-input-field" maxlength="15" placeholder="Enter your guess">
-              </div>
-              <!-- Buttons -->
-              <div class="wordle-buttons">
-                <button id="submitGuess" class="wordle-button submit-button">
-                  <i class="fas fa-paper-plane mr-2"></i> Submit Guess </button>
-                <button id="newGame" class="wordle-button new-game-button">
-                  <i class="fas fa-redo mr-2"></i> New Game </button>
-              </div>
-            </div>
-          </div>
-          <!-- Message Modal -->
-          <div id="wordleModal" class="wordle-modal">
-            <div class="wordle-modal-content">
-              <div id="wordleModalIcon" class="wordle-modal-icon"></div>
-              <h3 id="wordleModalTitle" class="wordle-modal-title"></h3>
-              <p id="wordleModalMessage" class="wordle-modal-message"></p>
-              <button id="wordleModalClose" class="wordle-modal-close">Continue</button>
-            </div>
-          </div>
+    <div class="page-header">
+      <div class="page-title-container">
+        <a href="../index" class="back-button">
+          <i class="fas fa-arrow-left"></i> Go Back </a>
+        <div>
+          <h1 class="page-title">Wordle</h1>
+          <p class="page-subtitle">Guess the World of Tanks: HEAT themed word</p>
         </div>
       </div>
-    </section>
+    </div>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/pages/wordle.js"></script>
   </body>

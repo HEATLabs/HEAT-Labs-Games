@@ -1,129 +1,16 @@
-/* Montserrat - Regular 400 */
-@font-face {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	src: url('fonts/Montserrat-Regular.ttf') format('truetype');
-}
-
-/* Montserrat - Medium 500 */
-@font-face {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 500;
-	src: url('fonts/Montserrat-Medium.ttf') format('truetype');
-}
-
-/* Montserrat - SemiBold 600 */
-@font-face {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 600;
-	src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
-}
-
-/* Montserrat - Bold 700 */
-@font-face {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 700;
-	src: url('fonts/Montserrat-Bold.ttf') format('truetype');
-}
-
-/* Open Sans - Regular 400 */
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 400;
-	src: url('fonts/OpenSans-Regular.ttf') format('truetype');
-}
-
-/* Open Sans - Medium 500 */
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 500;
-	src: url('fonts/OpenSans-Medium.ttf') format('truetype');
-}
-
-/* Open Sans - SemiBold 600 */
-@font-face {
-	font-family: 'Open Sans';
-	font-style: normal;
-	font-weight: 600;
-	src: url('fonts/OpenSans-SemiBold.ttf') format('truetype');
-}
-
-/* Roboto Mono - Regular 400 */
-@font-face {
-	font-family: 'Roboto Mono';
-	font-style: normal;
-	font-weight: 400;
-	src: url('fonts/RobotoMono-Regular.ttf') format('truetype');
-}
-
-/* Roboto Mono - Medium 500 */
-@font-face {
-	font-family: 'Roboto Mono';
-	font-style: normal;
-	font-weight: 500;
-	src: url('fonts/RobotoMono-Medium.ttf') format('truetype');
-}
-
-/* Discord Activity Specific Reset */
-html,
-body {
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	font-family: var(--font-body);
-	background-color: var(--bg-primary);
-	color: var(--text-primary);
-}
-
-/* Discord Activity Container */
-.discord-activity-container {
-	width: 100vw;
-	height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: var(--bg-primary);
-	overflow: hidden;
-}
-
-/* Main Content Wrapper */
-.content-wrapper {
-	width: 100%;
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	background-color: var(--bg-primary);
-}
-
-/* Main Section */
-#main {
-	flex: 1;
-	overflow-y: auto;
-	padding: 0;
-	position: relative;
-}
-
-/* Page Header - Consistent across all pages */
+/* Page Header */
 .page-header {
-	background-color: var(--bg-secondary);
-	padding: 1rem 1.5rem;
-	border-bottom: 1px solid var(--border-color);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	position: sticky;
-	top: 0;
-	z-index: 100;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: var(--bg-secondary);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    min-height: 60px;
 }
 
 .page-title-container {
@@ -168,39 +55,6 @@ body {
 	font-size: 0.875rem;
 	color: var(--text-secondary);
 	margin: 0.25rem 0 0 0;
-}
-
-/* Scrollbar Styling */
-#main::-webkit-scrollbar {
-	width: 8px;
-}
-
-#main::-webkit-scrollbar-track {
-	background: var(--bg-secondary);
-}
-
-#main::-webkit-scrollbar-thumb {
-	background: var(--border-color);
-	border-radius: 4px;
-}
-
-#main::-webkit-scrollbar-thumb:hover {
-	background: var(--accent-color);
-}
-
-/* Container */
-.container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 1rem;
-}
-
-/* Section */
-.section {
-	padding: 1rem 0;
-	min-height: calc(100vh - 60px);
-	box-sizing: border-box;
 }
 
 /* Font Setup */

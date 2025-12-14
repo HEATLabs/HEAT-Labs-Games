@@ -87,38 +87,16 @@
     <meta name="twitter:image:alt" content="HEAT Labs - Your one-stop solution for comprehensive statistics insights and guides for World of Tanks: HEAT">
   </head>
   <body>
-    <!-- Roulette Section -->
-    <section id="main" class="section">
-      <div class="container mx-auto px-4">
-        <div class="roulette-container">
-          <h2 class="section-title">Random Tank Selector</h2>
-          <div class="roulette-wrapper">
-            <div class="roulette-arrow"></div>
-            <div class="roulette-wheel" id="rouletteWheel"></div>
-          </div>
-          <div class="result-container" id="resultContainer">
-            <div class="result-card hidden" id="resultCard">
-              <div class="result-image-container">
-                <img id="resultImage" src="" alt="Selected Tank" class="result-image">
-              </div>
-              <div class="result-info">
-                <h3 id="resultName"></h3>
-                <div class="result-meta">
-                  <span id="resultNation"></span>
-                  <span id="resultType"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="spin-container">
-            <button class="btn-accent spin-button" id="spinButton">
-              <i class="fas fa-random mr-2"></i>Spin the Wheel </button>
-            <div class="spin-counter" id="spinCounter"> Spins: <span id="spinCount">0</span>
-            </div>
-          </div>
+    <div class="page-header">
+      <div class="page-title-container">
+        <a href="../index" class="back-button">
+          <i class="fas fa-arrow-left"></i> Go Back </a>
+        <div>
+          <h1 class="page-title">Tank Roulette</h1>
+          <p class="page-subtitle">Spin to get a random tank</p>
         </div>
       </div>
-    </section>
+    </div>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/pages/roulette.js"></script>
   </body>
