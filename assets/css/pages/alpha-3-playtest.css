@@ -1,4 +1,34 @@
-/* Countdown specific styles */
+/* Alpha 3 Playtest Countdown Styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.home-hero {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/hero-background/1.webp');
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.hero-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(135deg, rgba(255, 131, 0, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+	z-index: 1;
+}
+
 .countdown-container {
 	display: flex;
 	flex-direction: column;
@@ -9,6 +39,27 @@
 	padding: 1rem;
 	width: 100%;
 	overflow: hidden;
+	position: relative;
+	z-index: 2;
+}
+
+.countdown-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: #ffffff;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-subtitle {
+	font-size: 1.5rem;
+	color: #ff8300;
+	margin-bottom: 3rem;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.countdown-subtitle b {
+	color: #ffffff;
 }
 
 .countdown-timer {
@@ -29,13 +80,15 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: rgba(30, 30, 30, 0.8);
+	background-color: rgba(30, 30, 30, 0.9);
 	border-radius: 0.5rem;
 	padding: 1.5rem;
 	min-width: 120px;
-	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 	flex-shrink: 0;
 	box-sizing: border-box;
+	border: 1px solid #333;
+	backdrop-filter: blur(10px);
 }
 
 .countdown-value {
@@ -44,20 +97,22 @@
 	justify-content: center;
 	font-size: 5rem;
 	font-weight: 700;
-	color: var(--accent-color);
+	color: #ff8300;
 	margin-bottom: 0.5rem;
-	font-family: var(--font-code);
+	font-family: 'Courier New', monospace;
 	width: 100%;
 	height: 100%;
 	text-align: center;
 	line-height: 1;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .countdown-label {
 	font-size: 1rem;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: var(--text-secondary);
+	color: #b0b0b0;
+	font-weight: 600;
 }
 
 /* Simplified mode styles */
@@ -68,6 +123,7 @@
 .countdown-timer.simple-mode .countdown-item {
 	min-width: 600px;
 	padding: 2rem;
+	background-color: rgba(20, 20, 20, 0.95);
 }
 
 /* Notification popup styles */
@@ -76,10 +132,10 @@
 	bottom: 20px;
 	left: 50%;
 	transform: translateX(-50%);
-	background-color: var(--bg-dark);
+	background-color: #1e1e1e;
 	padding: 15px 20px;
 	border-radius: 8px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 	max-width: 90%;
 	width: 600px;
 	z-index: 1000;
@@ -87,30 +143,39 @@
 	justify-content: space-between;
 	align-items: center;
 	animation: slideUp 0.3s ease-out;
+	border: 1px solid #333;
+	backdrop-filter: blur(10px);
 }
 
 .notification-popup p {
 	margin: 0;
-	color: var(--text-dark);
+	color: #b0b0b0;
 	padding-right: 15px;
 	font-size: 0.9rem;
 	line-height: 1.4;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 .notification-popup .close-btn {
 	background: none;
 	border: none;
-	color: var(--text-dark);
-	font-size: 1.2rem;
+	color: #ff8300;
+	font-size: 1.5rem;
 	cursor: pointer;
 	padding: 5px;
 	flex-shrink: 0;
 	transition: color 0.2s;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
 }
 
 .notification-popup .close-btn:hover {
-	color: var(--text-secondary);
+	background-color: rgba(255, 131, 0, 0.1);
+	color: #ffffff;
 }
 
 @keyframes slideUp {
@@ -127,6 +192,14 @@
 
 /* Responsive styles */
 @media (max-width: 768px) {
+	.countdown-title {
+		font-size: 2rem;
+	}
+
+	.countdown-subtitle {
+		font-size: 1.25rem;
+	}
+
 	.countdown-timer {
 		gap: 1rem;
 		padding: 0.5rem;
@@ -158,6 +231,18 @@
 }
 
 @media (max-width: 480px) {
+	.countdown-title {
+		font-size: 1.75rem;
+		text-align: center;
+		padding: 0 1rem;
+	}
+
+	.countdown-subtitle {
+		font-size: 1.1rem;
+		text-align: center;
+		padding: 0 1rem;
+	}
+
 	.countdown-timer {
 		gap: 0.5rem;
 	}
@@ -174,6 +259,10 @@
 	.notification-popup {
 		width: 95%;
 		padding: 10px 12px;
+	}
+
+	.notification-popup p {
+		font-size: 0.8rem;
 	}
 }
 
