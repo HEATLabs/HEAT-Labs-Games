@@ -8,8 +8,7 @@
       "slug": "aircraft-carrier",
       "type": "Unknown Type",
       "size": "Unknown Size",
-      "description": "A tropical shipyard map centered around a grounded aircraft carrier, featuring dynamic elements like a moving barge and multiple flanking routes through naval warehouses.",
-      "image": "https://cdn8.heatlabs.net/maps/aircraft-carrier/Aircraft_Carrier_1.webp"
+      "image": "../assets/images/maps/aircraft-carrier/Aircraft_Carrier_1.webp"
     },
     {
       "id": 2,
@@ -19,8 +18,7 @@
       "slug": "baikonur",
       "type": "Unknown Type",
       "size": "Unknown Size",
-      "description": "We're still working on documenting this map. Our team is currently analyzing its layout, design choices, and gameplay flow. A full breakdown will be available soon.",
-      "image": "https://cdn8.heatlabs.net/maps/baikonur/Baikonur_1.webp"
+      "image": "../assets/images/maps/baikonur/Baikonur_1.webp"
     },
     {
       "id": 3,
@@ -30,8 +28,7 @@
       "slug": "ballistic-range",
       "type": "Unknown Type",
       "size": "Unknown Size",
-      "description": "We're still working on documenting this map. Our team is currently analyzing its layout, design choices, and gameplay flow. A full breakdown will be available soon.",
-      "image": "https://cdn8.heatlabs.net/maps/ballistic-range/Ballistic_Range_1.webp"
+      "image": "../assets/images/maps/ballistic-range/Ballistic_Range_1.webp"
     },
     {
       "id": 4,
@@ -41,8 +38,7 @@
       "slug": "blossom-crash",
       "type": "Unknown Type",
       "size": "1350m x 1145m",
-      "description": "Set in a spring-themed environment disrupted by a recent crash, this map combines natural beauty with chaotic terrain, offering varied combat scenarios.",
-      "image": "https://cdn8.heatlabs.net/maps/blossom-crash/Blossom_Crash_1.webp"
+      "image": "../assets/images/maps/blossom-crash/Blossom_Crash_1.webp"
     },
     {
       "id": 5,
@@ -52,8 +48,7 @@
       "slug": "inferno",
       "type": "Unknown Type",
       "size": "Unknown Size",
-      "description": "We're still working on documenting this map. Our team is currently analyzing its layout, design choices, and gameplay flow. A full breakdown will be available soon.",
-      "image": "https://cdn8.heatlabs.net/maps/inferno/Inferno_1.webp"
+      "image": "../assets/images/maps/inferno/Inferno_1.webp"
     },
     {
       "id": 6,
@@ -63,8 +58,7 @@
       "slug": "military-training",
       "type": "Unknown Type",
       "size": "Unknown Size",
-      "description": "We're still working on documenting this map. Our team is currently analyzing its layout, design choices, and gameplay flow. A full breakdown will be available soon.",
-      "image": "https://cdn8.heatlabs.net/maps/military-training/Military_Training_1.webp"
+      "image": "../assets/images/maps/military-training/Military_Training_1.webp"
     },
     {
       "id": 7,
@@ -74,8 +68,7 @@
       "slug": "moonshot",
       "type": "Unknown Type",
       "size": "Unknown Size",
-      "description": "We're still working on documenting this map. Our team is currently analyzing its layout, design choices, and gameplay flow. A full breakdown will be available soon.",
-      "image": "https://cdn8.heatlabs.net/maps/moonshot/Moonshot_1.webp"
+      "image": "../assets/images/maps/moonshot/Moonshot_1.webp"
     },
     {
       "id": 8,
@@ -85,8 +78,7 @@
       "slug": "nexus-dam",
       "type": "Unknown Type",
       "size": "880m x 960m",
-      "description": "An industrial map featuring a massive dam structure, providing vertical gameplay opportunities and strategic choke-points.",
-      "image": "https://cdn8.heatlabs.net/maps/nexus-dam/Nexus_Dam_1.webp"
+      "image": "../assets/images/maps/nexus-dam/Nexus_Dam_1.webp"
     },
     {
       "id": 9,
@@ -96,8 +88,7 @@
       "slug": "nord-oko",
       "type": "Unknown Type",
       "size": "850m x 910m",
-      "description": "A snow-covered map with a circular design, offering multiple paths and central control points, designed for strategic maneuvering.",
-      "image": "https://cdn8.heatlabs.net/maps/nord-oko/Nord_Oko_1.webp"
+      "image": "../assets/images/maps/nord-oko/Nord_Oko_1.webp"
     },
     {
       "id": 10,
@@ -107,8 +98,7 @@
       "slug": "project-phoenix",
       "type": "Unknown Type",
       "size": "Unknown Size",
-      "description": "A scientific research base set in the foothills of a mountain range offering a chaotic thunder-dome with several flanking routes.",
-      "image": "https://cdn8.heatlabs.net/maps/project-phoenix/Project_Phoenix_1.webp"
+      "image": "../assets/images/maps/project-phoenix/Project_Phoenix_1.webp"
     },
     {
       "id": 11,
@@ -118,8 +108,7 @@
       "slug": "ring-of-fury",
       "type": "Unknown Type",
       "size": "Unknown Size",
-      "description": "We're still working on documenting this map. Our team is currently analyzing its layout, design choices, and gameplay flow. A full breakdown will be available soon.",
-      "image": "https://cdn8.heatlabs.net/maps/ring-of-fury/Ring_Of_Fury_1.webp"
+      "image": "../assets/images/maps/ring-of-fury/Ring_Of_Fury_1.webp"
     },
     {
       "id": 12,
@@ -129,8 +118,7 @@
       "slug": "scarred-city",
       "type": "Unknown Type",
       "size": "1200m x 1250m",
-      "description": "An urban map set in a war-torn cityscape, supporting multiple game modes like Conquest, Domination, and Plant and Defuse, with a dynamic kite formation base layout.",
-      "image": "https://cdn8.heatlabs.net/maps/scarred-city/Scarred_City_1.webp"
+      "image": "../assets/images/maps/scarred-city/Scarred_City_1.webp"
     },
     {
       "id": 13,
@@ -140,8 +128,7 @@
       "slug": "sunstroke",
       "type": "Unknown Type",
       "size": "1030m x 930m",
-      "description": "A desert resort map with a focus on close quarter combat and flanking through city streets and construction sites.",
-      "image": "https://cdn8.heatlabs.net/maps/sunstroke/Sunstroke_1.webp"
+      "image": "../assets/images/maps/sunstroke/Sunstroke_1.webp"
     }
   ]
 }

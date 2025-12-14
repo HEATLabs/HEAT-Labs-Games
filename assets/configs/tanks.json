@@ -7,16 +7,7 @@
         "nation": "USA",
         "type": "Marksman",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/agds/upscaled_agds.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/agds/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/agds/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/agds/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/agds/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/agds/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/agds/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/agds/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/agds/abilities.json",
-        "model": "https://cdn4.heatlabs.net/agds/model/model.fbx"
+        "image": "../assets/images/tanks/agds/upscaled_agds.webp"
     },
     {
         "id": 2,
@@ -26,16 +17,7 @@
         "nation": "USA",
         "type": "Unknown",
         "class": "To Be Released",
-        "image": "https://cdn7.heatlabs.net/tanks/alvt/upscaled_alvt.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/alvt/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/alvt/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/alvt/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/alvt/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/alvt/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/alvt/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/alvt/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/alvt/abilities.json",
-        "model": "https://cdn4.heatlabs.net/alvt/model/model.fbx"
+        "image": "../assets/images/tanks/alvt/upscaled_alvt.webp"
     },
     {
         "id": 3,
@@ -45,16 +27,7 @@
         "nation": "USSR",
         "type": "Defender",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/bat-4m/upscaled_bat-4m.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/bat-4m/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/bat-4m/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/bat-4m/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/bat-4m/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/bat-4m/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/bat-4m/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/bat-4m/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/bat-4m/abilities.json",
-        "model": "https://cdn4.heatlabs.net/bat-4m/model/model.fbx"
+        "image": "../assets/images/tanks/bat-4m/upscaled_bat-4m.webp"
     },
     {
         "id": 4,
@@ -64,16 +37,7 @@
         "nation": "UK",
         "type": "Unknown",
         "class": "To Be Released",
-        "image": "https://cdn7.heatlabs.net/tanks/fv4030x/upscaled_fv4030x.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/fv4030x/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/fv4030x/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/fv4030x/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/fv4030x/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/fv4030x/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/fv4030x/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/fv4030x/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/fv4030x/abilities.json",
-        "model": "https://cdn4.heatlabs.net/fv4030x/model/model.fbx"
+        "image": "../assets/images/tanks/fv4030x/upscaled_fv4030x.webp"
     },
     {
         "id": 5,
@@ -83,16 +47,7 @@
         "nation": "USA",
         "type": "Assault",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/hstv-l/upscaled_hstv-l.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/hstv-l/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/hstv-l/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/hstv-l/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/hstv-l/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/hstv-l/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/hstv-l/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/hstv-l/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/hstv-l/abilities.json",
-        "model": "https://cdn4.heatlabs.net/hstv-l/model/model.fbx"
+        "image": "../assets/images/tanks/hstv-l/upscaled_hstv-l.webp"
     },
     {
         "id": 6,
@@ -102,16 +57,7 @@
         "nation": "Germany",
         "type": "Support",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/leopard-1a1b/upscaled_leopard-1a1b.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/leopard-1a1b/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/leopard-1a1b/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/leopard-1a1b/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/leopard-1a1b/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/leopard-1a1b/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/leopard-1a1b/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/leopard-1a1b/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/leopard-1a1b/abilities.json",
-        "model": "https://cdn4.heatlabs.net/leopard-1a1b/model/model.fbx"
+        "image": "../assets/images/tanks/leopard-1a1b/upscaled_leopard-1a1b.webp"
     },
     {
         "id": 7,
@@ -121,16 +67,7 @@
         "nation": "Germany",
         "type": "Marksman",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/leopard-1a6a1/full_leopard-1a6a1.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/leopard-1a6a1/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/leopard-1a6a1/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/leopard-1a6a1/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/leopard-1a6a1/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/leopard-1a6a1/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/leopard-1a6a1/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/leopard-1a6a1/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/leopard-1a6a1/abilities.json",
-        "model": "https://cdn4.heatlabs.net/leopard-1a6a1/model/model.fbx"
+        "image": "../assets/images/tanks/leopard-1a6a1/full_leopard-1a6a1.webp"
     },
     {
         "id": 8,
@@ -140,16 +77,7 @@
         "nation": "Germany",
         "type": "Assault",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/leopard-2k14/upscaled_leopard-2k14.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/leopard-2k14/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/leopard-2k14/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/leopard-2k14/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/leopard-2k14/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/leopard-2k14/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/leopard-2k14/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/leopard-2k14/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/leopard-2k14/abilities.json",
-        "model": "https://cdn4.heatlabs.net/leopard-2k14/model/model.fbx"
+        "image": "../assets/images/tanks/leopard-2k14/upscaled_leopard-2k14.webp"
     },
     {
         "id": 9,
@@ -159,16 +87,7 @@
         "nation": "Germany",
         "type": "Marksman",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/leopard-2fk/upscaled_leopard-2fk.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/leopard-2fk/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/leopard-2fk/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/leopard-2fk/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/leopard-2fk/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/leopard-2fk/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/leopard-2fk/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/leopard-2fk/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/leopard-2fk/abilities.json",
-        "model": "https://cdn4.heatlabs.net/leopard-2fk/model/model.fbx"
+        "image": "../assets/images/tanks/leopard-2fk/upscaled_leopard-2fk.webp"
     },
     {
         "id": 10,
@@ -178,16 +97,7 @@
         "nation": "USA",
         "type": "Unknown",
         "class": "Work in Progress",
-        "image": "https://cdn7.heatlabs.net/tanks/m1-railgun/upscaled_m1-railgun.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/m1-railgun/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/m1-railgun/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/m1-railgun/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/m1-railgun/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/m1-railgun/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/m1-railgun/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/m1-railgun/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/m1-railgun/abilities.json",
-        "model": "https://cdn4.heatlabs.net/m1-railgun/model/model.fbx"
+        "image": "../assets/images/tanks/m1-railgun/upscaled_m1-railgun.webp"
     },
     {
         "id": 11,
@@ -197,16 +107,7 @@
         "nation": "USA",
         "type": "Defender",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/m1e1/full_m1e1.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/m1e1/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/m1e1/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/m1e1/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/m1e1/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/m1e1/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/m1e1/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/m1e1/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/m1e1/abilities.json",
-        "model": "https://cdn4.heatlabs.net/m1e1/model/model.fbx"
+        "image": "../assets/images/tanks/m1e1/full_m1e1.webp"
     },
     {
         "id": 12,
@@ -216,16 +117,7 @@
         "nation": "USA",
         "type": "Marksman",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/m3a1-bradley/upscaled_m3a1-bradley.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/m3a1-bradley/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/m3a1-bradley/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/m3a1-bradley/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/m3a1-bradley/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/m3a1-bradley/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/m3a1-bradley/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/m3a1-bradley/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/m3a1-bradley/abilities.json",
-        "model": "https://cdn4.heatlabs.net/m3a1-bradley/model/model.fbx"
+        "image": "../assets/images/tanks/m3a1-bradley/upscaled_m3a1-bradley.webp"
     },
     {
         "id": 13,
@@ -235,16 +127,7 @@
         "nation": "USA",
         "type": "Defender",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/m60a3e2/upscaled_m60a3e2.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/m60a3e2/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/m60a3e2/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/m60a3e2/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/m60a3e2/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/m60a3e2/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/m60a3e2/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/m60a3e2/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/m60a3e2/abilities.json",
-        "model": "https://cdn4.heatlabs.net/m60a3e2/model/model.fbx"
+        "image": "../assets/images/tanks/m60a3e2/upscaled_m60a3e2.webp"
     },
     {
         "id": 14,
@@ -254,16 +137,7 @@
         "nation": "USA",
         "type": "Defender",
         "class": "Only for Bots",
-        "image": "https://cdn7.heatlabs.net/tanks/m60a3e2-bot/upscaled_m60a3e2-bot.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/m60a3e2-bot/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/m60a3e2-bot/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/m60a3e2-bot/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/m60a3e2-bot/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/m60a3e2-bot/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/m60a3e2-bot/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/m60a3e2-bot/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/m60a3e2-bot/abilities.json",
-        "model": "https://cdn4.heatlabs.net/m60a3e2-bot/model/model.fbx"
+        "image": "../assets/images/tanks/m60a3e2-bot/upscaled_m60a3e2-bot.webp"
     },
     {
         "id": 15,
@@ -273,16 +147,7 @@
         "nation": "USA",
         "type": "Assault",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/m60e2/upscaled_m60e2.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/m60e2/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/m60e2/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/m60e2/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/m60e2/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/m60e2/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/m60e2/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/m60e2/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/m60e2/abilities.json",
-        "model": "https://cdn4.heatlabs.net/m60e2/model/model.fbx"
+        "image": "../assets/images/tanks/m60e2/upscaled_m60e2.webp"
     },
     {
         "id": 16,
@@ -292,16 +157,7 @@
         "nation": "USA",
         "type": "Marksman",
         "class": "To Be Released",
-        "image": "https://cdn7.heatlabs.net/tanks/xm551/upscaled_xm551.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/xm551/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/xm551/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/xm551/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/xm551/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/xm551/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/xm551/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/xm551/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/xm551/abilities.json",
-        "model": "https://cdn4.heatlabs.net/xm551/model/model.fbx"
+        "image": "../assets/images/tanks/xm551/upscaled_xm551.webp"
     },
     {
         "id": 17,
@@ -311,16 +167,7 @@
         "nation": "USSR",
         "type": "Defender",
         "class": "Work in Progress",
-        "image": "https://cdn7.heatlabs.net/tanks/object-279/upscaled_object-279.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/object-279/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/object-279/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/object-279/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/object-279/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/object-279/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/object-279/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/object-279/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/object-279/abilities.json",
-        "model": "https://cdn4.heatlabs.net/object-279/model/model.fbx"
+        "image": "../assets/images/tanks/object-279/upscaled_object-279.webp"
     },
     {
         "id": 18,
@@ -330,16 +177,7 @@
         "nation": "USSR",
         "type": "Assault",
         "class": "To Be Released",
-        "image": "https://cdn7.heatlabs.net/tanks/object-287/upscaled_object-287.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/object-287/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/object-287/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/object-287/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/object-287/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/object-287/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/object-287/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/object-287/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/object-287/abilities.json",
-        "model": "https://cdn4.heatlabs.net/object-287/model/model.fbx"
+        "image": "../assets/images/tanks/object-287/upscaled_object-287.webp"
     },
     {
         "id": 19,
@@ -349,16 +187,7 @@
         "nation": "China",
         "type": "Marksman",
         "class": "Work in Progress",
-        "image": "https://cdn7.heatlabs.net/tanks/ptz89c/upscaled_ptz89c.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/ptz89c/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/ptz89c/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/ptz89c/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/ptz89c/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/ptz89c/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/ptz89c/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/ptz89c/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/ptz89c/abilities.json",
-        "model": "https://cdn4.heatlabs.net/ptz89c/model/model.fbx"
+        "image": "../assets/images/tanks/ptz89c/upscaled_ptz89c.webp"
     },
     {
         "id": 20,
@@ -368,16 +197,7 @@
         "nation": "USSR",
         "type": "Assault",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/t-62av/upscaled_t-62av.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/t-62av/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/t-62av/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/t-62av/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/t-62av/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/t-62av/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/t-62av/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/t-62av/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/t-62av/abilities.json",
-        "model": "https://cdn4.heatlabs.net/t-62av/model/model.fbx"
+        "image": "../assets/images/tanks/t-62av/upscaled_t-62av.webp"
     },
     {
         "id": 21,
@@ -387,16 +207,7 @@
         "nation": "USSR",
         "type": "Unknown",
         "class": "To Be Released",
-        "image": "https://cdn7.heatlabs.net/tanks/t-64a/upscaled_t-64a.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/t-64a/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/t-64a/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/t-64a/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/t-64a/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/t-64a/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/t-64a/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/t-64a/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/t-64a/abilities.json",
-        "model": "https://cdn4.heatlabs.net/t-64a/model/model.fbx"
+        "image": "../assets/images/tanks/t-64a/upscaled_t-64a.webp"
     },
     {
         "id": 22,
@@ -406,16 +217,7 @@
         "nation": "USSR",
         "type": "Defender",
         "class": "Work in Progress",
-        "image": "https://cdn7.heatlabs.net/tanks/t-62ms/upscaled_t-62ms.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/t-62ms/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/t-62ms/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/t-62ms/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/t-62ms/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/t-62ms/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/t-62ms/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/t-62ms/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/t-62ms/abilities.json",
-        "model": "https://cdn4.heatlabs.net/t-62ms/model/model.fbx"
+        "image": "../assets/images/tanks/t-62ms/upscaled_t-62ms.webp"
     },
     {
         "id": 23,
@@ -425,16 +227,7 @@
         "nation": "USSR",
         "type": "Assault",
         "class": "Work in Progress",
-        "image": "https://cdn7.heatlabs.net/tanks/t-72au/upscaled_t-72au.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/t-72au/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/t-72au/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/t-72au/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/t-72au/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/t-72au/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/t-72au/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/t-72au/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/t-72au/abilities.json",
-        "model": "https://cdn4.heatlabs.net/t-72au/model/model.fbx"
+        "image": "../assets/images/tanks/t-72au/upscaled_t-72au.webp"
     },
     {
         "id": 24,
@@ -444,16 +237,7 @@
         "nation": "USSR",
         "type": "Unknown",
         "class": "To Be Released",
-        "image": "https://cdn7.heatlabs.net/tanks/t-72b/upscaled_t-72b.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/t-72b/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/t-72b/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/t-72b/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/t-72b/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/t-72b/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/t-72b/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/t-72b/builds.json",
-        "abilities": "https://cdn2.heatlabs.net/tanks/t-72b/abilities.json",
-        "model": "https://cdn4.heatlabs.net/t-72b/model/model.fbx"
+        "image": "../assets/images/tanks/t-72b/upscaled_t-72b.webp"
     },
     {
         "id": 25,
@@ -463,15 +247,7 @@
         "nation": "USSR",
         "type": "Unknown",
         "class": "Only for Bots",
-        "image": "https://cdn7.heatlabs.net/tanks/t-55-enigma/upscaled_t-55-enigma.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/t-55-enigma/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/t-55-enigma/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/t-55-enigma/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/t-55-enigma/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/t-55-enigma/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/t-55-enigma/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/t-55-enigma/builds.json",
-        "model": "https://cdn4.heatlabs.net/t-55-enigma/model/model.fbx"
+        "image": "../assets/images/tanks/t-55-enigma/upscaled_t-55-enigma.webp"
     },
     {
         "id": 26,
@@ -481,15 +257,7 @@
         "nation": "USA",
         "type": "Assault",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/xm1-90/full_xm1-90.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/xm1-90/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/xm1-90/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/xm1-90/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/xm1-90/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/xm1-90/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/xm1-90/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/xm1-90/builds.json",
-        "model": "https://cdn4.heatlabs.net/xm1-90/model/model.fbx"
+        "image": "../assets/images/tanks/xm1-90/full_xm1-90.webp"
     },
     {
         "id": 27,
@@ -499,15 +267,7 @@
         "nation": "USA",
         "type": "Defender",
         "class": "Available Now",
-        "image": "https://cdn7.heatlabs.net/tanks/xm1-v/upscaled_xm1-v.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/xm1-v/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/xm1-v/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/xm1-v/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/xm1-v/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/xm1-v/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/xm1-v/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/xm1-v/builds.json",
-        "model": "https://cdn4.heatlabs.net/xm1-v/model/model.fbx"
+        "image": "../assets/images/tanks/xm1-v/upscaled_xm1-v.webp"
     },
     {
         "id": 28,
@@ -517,15 +277,7 @@
         "nation": "USA",
         "type": "Assault",
         "class": "To Be Released",
-        "image": "https://cdn7.heatlabs.net/tanks/xm808-twister/upscaled_xm808-twister.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/xm808-twister/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/xm808-twister/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/xm808-twister/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/xm808-twister/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/xm808-twister/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/xm808-twister/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/xm808-twister/builds.json",
-        "model": "https://cdn4.heatlabs.net/xm808-twister/model/model.fbx"
+        "image": "../assets/images/tanks/xm808-twister/upscaled_xm808-twister.webp"
     },
     {
         "id": 29,
@@ -535,14 +287,6 @@
         "nation": "France",
         "type": "Unknown",
         "class": "Hinted in Trailer",
-        "image": "https://cdn7.heatlabs.net/tanks/amx-10-rc/upscaled_amx-10-rc.webp",
-        "stock": "https://cdn2.heatlabs.net/tanks/amx-10-rc/stock.json",
-        "upgrades": "https://cdn2.heatlabs.net/tanks/amx-10-rc/upgrades.json",
-        "consumables": "https://cdn2.heatlabs.net/tanks/amx-10-rc/consumables.json",
-        "perks": "https://cdn2.heatlabs.net/tanks/amx-10-rc/perks.json",
-        "agents": "https://cdn2.heatlabs.net/tanks/amx-10-rc/agents.json",
-        "details": "https://cdn2.heatlabs.net/tanks/amx-10-rc/details.json",
-        "builds": "https://cdn2.heatlabs.net/tanks/amx-10-rc/builds.json",
-        "model": "https://cdn4.heatlabs.net/amx-10-rc/model/model.fbx"
+        "image": "../assets/images/tanks/amx-10-rc/upscaled_amx-10-rc.webp"
     }
 ]

@@ -6,27 +6,7 @@
       "name": "Blitz",
       "slug": "blitz",
       "status": "Available Now",
-      "image": "https://cdn7.heatlabs.net/agents/Blitz.webp",
-      "specialty": "EMP Rakete",
-      "description": "Launches a slow-moving rocket system that can be controlled like any other guided missile. When the missile confronts any object, it will slow down and jam nearby opponents. The rocket deals electrical damage as it moves and after coming into contact with an obstacle will detonate with a short delay, or it can be manually triggered.",
-      "story": "A tech expert who jams enemy electronics and strikes hard from a distance. A tech-obsessed rule follower, Blitz would rather solve problems with gadgets than people skills, he swears the future belongs to robots and remote warfare, mocking anyone stuck in the old ways. Maximum efficiency but little empathy; he's ruthlessly smart and honest to a fault, with a laser focus that gets results. Blitz claims he's too busy for friends or dating, truth is, he's terrible at both but would never admit it.",
-      "compatibleTanks": [
-        {
-          "name": "Leopard 1A1B",
-          "image": "https://cdn7.heatlabs.net/tanks/leopard-1a1b/icon_leopard-1a1b.webp",
-          "slug": "leopard-1a1b"
-        },
-        {
-          "name": "M3A3 Bradley",
-          "image": "https://cdn7.heatlabs.net/tanks/m3a1-bradley/icon_m3a1-bradley.webp",
-          "slug": "m3a1-bradley"
-        },
-        {
-          "name": "XM551",
-          "image": "https://cdn7.heatlabs.net/tanks/xm551/icon_xm551.webp",
-          "slug": "xm551"
-        }
-      ]
+      "image": "../assets/images/agents/Blitz.webp"
     },
     {
       "id": 2,
@@ -34,17 +14,7 @@
       "name": "Anansi",
       "slug": "anansi",
       "status": "Available Now",
-      "image": "https://cdn7.heatlabs.net/agents/Anansi.webp",
-      "specialty": "Spectre Gunship",
-      "description": "Call in the assistance of an AC-130H Spectre gunship with a 40mm autocannon and a limited amount of ammunition for its precision 105mm gun",
-      "story": "A battlefield control specialist with a gunship providing backup fire. A tough cool kid from a Carribean mix of cultures, Anansi grew up watching her seamstress mom work miracles with a needle and thread. Now she's working her own kind of miracles, making money for her family and avoiding bad company. She's all laughs and stories at the bar, but ask anything personal and she clams right up, that's none of your business. And don't gamble with her unless you want to lose your shirt.",
-      "compatibleTanks": [
-        {
-          "name": "AGDS",
-          "image": "https://cdn7.heatlabs.net/tanks/agds/icon_agds.webp",
-          "slug": "agds"
-        }
-      ]
+      "image": "../assets/images/agents/Anansi.webp"
     },
     {
       "id": 3,
@@ -52,27 +22,7 @@
       "name": "Ember",
       "slug": "ember",
       "status": "Available Now",
-      "image": "https://cdn7.heatlabs.net/agents/Ember.webp",
-      "specialty": "Trophy Time",
-      "description": " Call in protection, requesting the drop of a turret that intercepts incoming projectiles, and she rushes towards allies with a speed boost",
-      "story": "A vanguard supporter who protects allies in combat, using her turret to intercept enemy fire. She's annoyingly flawless: a suburban poster girl, she shines everywhere, a prom queen, a softball captain, and now an Agent showing up for her team right when they need her. Always ready for action with military precision and athletic grace, she's the first to jump in. But there's something vulnerable beneath that polished exterior, so be there for her, and you might learn her secrets.",
-      "compatibleTanks": [
-        {
-          "name": "M60A3E2",
-          "image": "https://cdn7.heatlabs.net/tanks/m60a3e2/icon_m60a3e2.webp",
-          "slug": "m60a3e2"
-        },
-        {
-          "name": "M60A3E2 Bot",
-          "image": "https://cdn7.heatlabs.net/tanks/m60a3e2-bot/icon_m60a3e2-bot.webp",
-          "slug": "m60a3e2-bot"
-        },
-        {
-          "name": "BAT-4M",
-          "image": "https://cdn7.heatlabs.net/tanks/bat-4m/icon_bat-4m.webp",
-          "slug": "bat-4m"
-        }
-      ]
+      "image": "../assets/images/agents/Ember.webp"
     },
     {
       "id": 4,
@@ -80,27 +30,7 @@
       "name": "Kent",
       "slug": "kent",
       "status": "Available Now",
-      "image": "https://cdn7.heatlabs.net/agents/Kent.webp",
-      "specialty": "Contracts",
-      "description": "Lock as many opponents as possible in the cone view, activate the ability, and watch as enemies get blasted by aerial strikes",
-      "story": "A hitman that makes no target safe. Once he has intel on your location, you'll face ballistic strikes unless you move. A dapper, bright, and ambitious lad, Kent exudes confidence in spades. But don't be fooled by the charm, his promising career crashed after a major incident, whether his fault or not. Talented but tarnished, joining the Agents is his last shot at redemption. He's buried his past failures deep, but he's terrified they'll surface at any minute, so he's a bit of a show off with his peculiar skill: cursed with extraordinary luck, he knows who to hit and when.",
-      "compatibleTanks": [
-        {
-          "name": "HSTV-L",
-          "image": "https://cdn7.heatlabs.net/tanks/hstv-l/icon_hstv-l.webp",
-          "slug": "hstv-l"
-        },
-        {
-          "name": "XM1-90",
-          "image": "https://cdn7.heatlabs.net/tanks/xm1-90/icon_xm1-90.webp",
-          "slug": "xm1-90"
-        },
-        {
-          "name": "XM808 Twister",
-          "image": "https://cdn7.heatlabs.net/tanks/xm808-twister/icon_xm808-twister.webp",
-          "slug": "xm808-twister"
-        }
-      ]
+      "image": "../assets/images/agents/Kent.webp"
     },
     {
       "id": 5,
@@ -108,22 +38,7 @@
       "name": "Hound",
       "slug": "hound",
       "status": "Available Now",
-      "image": "https://cdn7.heatlabs.net/agents/Hound.webp",
-      "specialty": "Hunter's Mark",
-      "description": "After activation, looking at any enemy tank will reveal the location of its critical modules to both Hound and his team. Aiming at any revealed critical zone and penetrating the tank is enough for hitting it while the Hunters Mark is on the opponent. Critical damage on a marked tank will extend the duration",
-      "story": "A hunter who spots enemy weak points and reveals them to the team. He grew up on a remote Arctic research outpost, honing his observational skills. His world was shattered at the age of 12, when a clandestine military unit kidnapped his parents and destroyed the station, launching Hound's lifelong pursuit of the perpetrators. This led him to black ops, where he moves like a ghost across the battlefield, trusting no one and suspecting everyone. He's a kind of a Cassandra character; no one believes his paranoia. But guess who will eventually be proven right!",
-      "compatibleTanks": [
-        {
-          "name": "Leopard 1A6A1",
-          "image": "https://cdn7.heatlabs.net/tanks/leopard-1a6a1/icon_leopard-1a6a1.webp",
-          "slug": "leopard-1a6a1"
-        },
-        {
-          "name": "Leopard 2FK",
-          "image": "https://cdn7.heatlabs.net/tanks/leopard-2fk/icon_leopard-2fk.webp",
-          "slug": "leopard-2fk"
-        }
-      ]
+      "image": "../assets/images/agents/Hound.webp"
     },
     {
       "id": 6,
@@ -131,68 +46,7 @@
       "name": "Reaper",
       "slug": "reaper",
       "status": "Available Now",
-      "image": "https://cdn7.heatlabs.net/agents/Reaper.webp",
-      "specialty": "Execute",
-      "description": "Reaper can always sense weakness in his opponents and strike hard against it. Any opponent that has less than 420 HP left is killed immediately when Reaper manages to deal damage to the target vehicle. When you activate the ability, Reaper loads a clip of shells that can deal increased critical damage and execute opponents more easily. The clip is automatically reloaded when Reaper executes an opponent.",
-      "story": "A bold fighter who excels at close range, striking swiftly to finish off wounded enemies. A quiet artist with ancient warrior blood, Reaper is a man of few words but deadly moves. He often ignores orders to follow his gut feelings, and somehow it's always the right call. He never rushes, moving with calm grace, like he already knows what's coming next. You'll rarely catch his eye, but when you do, he stares right through you with unnerving confidence. From quick sketches in his notebook to perfect shots at enemies, not a single movement is wasted.",
-      "compatibleTanks": [
-        {
-          "name": "Leopard 2K14",
-          "image": "https://cdn7.heatlabs.net/tanks/leopard-2k14/icon_leopard-2k14.webp",
-          "slug": "leopard-2k14"
-        },
-        {
-          "name": "M60E2",
-          "image": "https://cdn7.heatlabs.net/tanks/m60e2/icon_m60e2.webp",
-          "slug": "m60e2"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "state": "hidden",
-      "name": "Ray",
-      "slug": "ray",
-      "status": "To Be Released",
-      "image": "https://cdn5.heatlabs.net/placeholder/imagecomingsoon.webp",
-      "specialty": "Unknown Ability",
-      "description": "Unknown Ability Description",
-      "story": "This agent is not yet available. Statistics, details, and player feedback will be added once it's officially released.",
-      "compatibleTanks": [
-        {
-          "name": "M1 Railgun",
-          "image": "https://cdn7.heatlabs.net/tanks/m1-railgun/icon_m1-railgun.webp",
-          "slug": "m1-railgun"
-        },
-        {
-          "name": "PTZ-89C",
-          "image": "https://cdn7.heatlabs.net/tanks/ptz89c/icon_ptz89c.webp",
-          "slug": "ptz89c"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "state": "hidden",
-      "name": "Udarnik",
-      "slug": "udarnik",
-      "status": "To Be Released",
-      "image": "https://cdn5.heatlabs.net/placeholder/imagecomingsoon.webp",
-      "specialty": "Unknown Ability",
-      "description": "Unknown Ability Description",
-      "story": "This agent is not yet available. Statistics, details, and player feedback will be added once it's officially released.",
-      "compatibleTanks": [
-        {
-          "name": "Object 279",
-          "image": "https://cdn7.heatlabs.net/tanks/object-279/icon_object-279.webp",
-          "slug": "object-279"
-        },
-        {
-          "name": "T-62MS",
-          "image": "https://cdn7.heatlabs.net/tanks/t-62ms/icon_t-62ms.webp",
-          "slug": "t-62ms"
-        }
-      ]
+      "image": "../assets/images/agents/Reaper.webp"
     },
     {
       "id": 9,
@@ -200,27 +54,7 @@
       "name": "Raketa",
       "slug": "raketa",
       "status": "Available Now",
-      "image": "https://cdn7.heatlabs.net/agents/Raketa.webp",
-      "specialty": "Scavenge",
-      "description": "When you destroy the enemy, you gain a token out of them and recover some health, this works as a passive ability. When the ability is available, you can activate it, and Raketa will load collected scrap, using a rapid-fire shotgun to destroy enemies even faster.",
-      "story": "A scavenger who uses enemy scrap to create deadly close-range weapons. He never shuts up, always cracking bad jokes and failing miserably at flirting with every woman in sight, but his real talent is turning random junk into deadly weapons. He lives for thrills and chaos, but stays ice-cold when things get rough. Don't be fooled by his jokes and games: he'll gladly sneak up on foes and stab them in the back, it's his specialty. He has done some nasty things in the past, all in the name of getting results, and he is not ashamed to admit it.",
-      "compatibleTanks": [
-        {
-          "name": "Object 287",
-          "image": "https://cdn7.heatlabs.net/tanks/object-287/icon_object-287.webp",
-          "slug": "object-287"
-        },
-        {
-          "name": "T-72AU",
-          "image": "https://cdn7.heatlabs.net/tanks/t-72au/icon_t-72au.webp",
-          "slug": "t-72au"
-        },
-        {
-          "name": "T-62AV",
-          "image": "https://cdn7.heatlabs.net/tanks/t-62av/icon_t-62av.webp",
-          "slug": "t-62av"
-        }
-      ]
+      "image": "../assets/images/agents/Raketa.webp"
     },
     {
       "id": 10,
@@ -228,94 +62,7 @@
       "name": "Chopper",
       "slug": "chopper",
       "status": "Available Now",
-      "image": "https://cdn7.heatlabs.net/agents/Chopper.webp",
-      "specialty": "Shock and Awe",
-      "description": "Call in the support of Chopper's friend in the Air Force, the bomber will fly to the targeted position deal a lot of damage, and become dazed.",
-      "story": "A frontline fighter who calls in air support to hold the line. He is a bear of a man on his chrome-plated bike, but appearances deceive. Big personality, heart of gold: devoted to friends, lethal to enemies. A father figure to many Agents, he's a down-to-earth family man who signed up to provide for his kids' education, yet this practical soul has a literary quote ready for any moment. But cross this bear at your own peril.",
-      "compatibleTanks": [
-        {
-          "name": "M1E1",
-          "image": "https://cdn7.heatlabs.net/tanks/m1e1/icon_m1e1.webp",
-          "slug": "m1e1"
-        },
-        {
-          "name": "XM1-V",
-          "image": "https://cdn7.heatlabs.net/tanks/xm1-v/icon_xm1-v.webp",
-          "slug": "xm1-v"
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "state": "hidden",
-      "name": "Arblast",
-      "slug": "arblast",
-      "status": "To Be Released",
-      "image": "https://cdn5.heatlabs.net/placeholder/imagecomingsoon.webp",
-      "specialty": "Unknown Ability",
-      "description": "Unknown Ability Description",
-      "story": "This agent is not yet available. Statistics, details, and player feedback will be added once it's officially released.",
-      "compatibleTanks": []
-    },
-    {
-      "id": 12,
-      "state": "hidden",
-      "name": "Atom",
-      "slug": "atom",
-      "status": "To Be Released",
-      "image": "https://cdn5.heatlabs.net/placeholder/imagecomingsoon.webp",
-      "specialty": "Unknown Ability",
-      "description": "Unknown Ability Description",
-      "story": "This agent is not yet available. Statistics, details, and player feedback will be added once it's officially released.",
-      "compatibleTanks": []
-    },
-    {
-      "id": 13,
-      "state": "hidden",
-      "name": "Jager",
-      "slug": "jager",
-      "status": "To Be Released",
-      "image": "https://cdn5.heatlabs.net/placeholder/imagecomingsoon.webp",
-      "specialty": "Unknown Ability",
-      "description": "Unknown Ability Description",
-      "story": "This agent is not yet available. Statistics, details, and player feedback will be added once it's officially released.",
-      "compatibleTanks": []
-    },
-    {
-      "id": 14,
-      "state": "hidden",
-      "name": "Punch",
-      "slug": "punch",
-      "status": "To Be Released",
-      "image": "https://cdn5.heatlabs.net/placeholder/imagecomingsoon.webp",
-      "specialty": "Unknown Ability",
-      "description": "Unknown Ability Description",
-      "story": "This agent is not yet available. Statistics, details, and player feedback will be added once it's officially released.",
-      "compatibleTanks": []
-    },
-    {
-      "id": 15,
-      "state": "hidden",
-      "name": "Fantome",
-      "slug": "fantome",
-      "status": "To Be Released",
-      "image": "https://cdn5.heatlabs.net/placeholder/imagecomingsoon.webp",
-      "specialty": "Unknown Ability",
-      "description": "Unknown Ability Description",
-      "story": "This agent is not yet available. Statistics, details, and player feedback will be added once it's officially released.",
-      "compatibleTanks": []
-    },
-    {
-      "id": 16,
-      "state": "hidden",
-      "name": "Akira",
-      "slug": "akira",
-      "status": "To Be Released",
-      "image": "https://cdn5.heatlabs.net/placeholder/imagecomingsoon.webp",
-      "specialty": "Unknown Ability",
-      "description": "Unknown Ability Description",
-      "story": "This agent is not yet available. Statistics, details, and player feedback will be added once it's officially released.",
-      "compatibleTanks": []
+      "image": "../assets/images/agents/Chopper.webp"
     }
   ]
 }
