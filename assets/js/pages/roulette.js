@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultName = document.getElementById('resultName');
     const resultNation = document.getElementById('resultNation');
     const resultType = document.getElementById('resultType');
-    const resultLink = document.getElementById('resultLink');
     const spinCount = document.getElementById('spinCount');
 
     let tanks = [];
@@ -395,7 +394,6 @@ document.addEventListener('DOMContentLoaded', function() {
         resultName.textContent = tank.name;
         resultNation.innerHTML = `<i class="fas fa-flag"></i> ${tank.nation}`;
         resultType.innerHTML = `<i class="fas fa-tag"></i> ${tank.type}`;
-        resultLink.href = `../tanks/${tank.slug}`;
 
         // Show the result card with animation
         setTimeout(() => {
