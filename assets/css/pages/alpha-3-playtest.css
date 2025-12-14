@@ -1,15 +1,16 @@
 /* Alpha 3 Playtest Countdown Styles */
 body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    font-family: var(--font-body);
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	font-family: var(--font-body);
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	height: 100vh;
 }
 
 .home-hero {
-	min-height: 100vh;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -17,6 +18,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	position: relative;
+	overflow: hidden;
 }
 
 .hero-overlay {
@@ -34,7 +36,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
+	height: 100vh;
 	text-align: center;
 	padding: 1rem;
 	width: 100%;
@@ -95,7 +97,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 5rem;
+	font-size: 4rem;
 	font-weight: 700;
 	color: #ff8300;
 	margin-bottom: 0.5rem;
@@ -121,7 +123,7 @@ body {
 }
 
 .countdown-timer.simple-mode .countdown-item {
-	min-width: 600px;
+	min-width: 400px;
 	padding: 2rem;
 	background-color: rgba(20, 20, 20, 0.95);
 }
@@ -145,6 +147,8 @@ body {
 	animation: slideUp 0.3s ease-out;
 	border: 1px solid #333;
 	backdrop-filter: blur(10px);
+	max-height: 150px;
+	overflow-y: auto;
 }
 
 .notification-popup p {
@@ -216,13 +220,14 @@ body {
 	}
 
 	.countdown-timer.simple-mode .countdown-item {
-		min-width: 90vw;
+		min-width: 300px;
 		padding: 1.5rem;
 	}
 
 	.notification-popup {
 		width: 90%;
 		padding: 12px 15px;
+		max-height: 100px;
 	}
 
 	.notification-popup p {
@@ -259,6 +264,7 @@ body {
 	.notification-popup {
 		width: 95%;
 		padding: 10px 12px;
+		max-height: 80px;
 	}
 
 	.notification-popup p {

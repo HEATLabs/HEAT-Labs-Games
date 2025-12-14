@@ -1,16 +1,20 @@
 /* 404 Page Styles */
 body {
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    font-family: var(--font-body);
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	font-family: var(--font-body);
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
 }
 
 .error-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
-	padding: 2rem;
+	height: 100vh;
+	padding: 1rem;
 	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../assets/images/hero-background/1.webp');
 	background-size: cover;
 	background-position: center;
@@ -18,8 +22,8 @@ body {
 
 .error-content {
 	text-align: center;
-	max-width: 800px;
-	padding: 3rem;
+	max-width: 600px;
+	padding: 2rem;
 	background-color: rgba(30, 30, 30, 0.9);
 	border-radius: 1rem;
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -28,29 +32,29 @@ body {
 }
 
 .error-code {
-	font-size: 8rem;
+	font-size: 5rem;
 	font-weight: bold;
 	color: #ff8300;
 	line-height: 1;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .error-title {
-	font-size: 2.5rem;
+	font-size: 2rem;
 	font-weight: bold;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 	color: #ffffff;
 }
 
 .error-message {
-	font-size: 1.25rem;
+	font-size: 1.1rem;
 	color: #b0b0b0;
-	margin-bottom: 2rem;
-	max-width: 600px;
+	margin-bottom: 1rem;
+	max-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
-	line-height: 1.6;
+	line-height: 1.5;
 }
 
 .error-image {
@@ -58,12 +62,12 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 }
 
 .error-image img {
-	width: 350px;
-	height: 350px;
+	width: 200px;
+	height: 200px;
 	border-radius: 0.5rem;
 	object-fit: cover;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -75,19 +79,20 @@ body {
 	gap: 1rem;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 2rem;
+	margin-top: 1.5rem;
 }
 
 .error-actions a {
 	background-color: #ff8300;
 	color: white;
-	padding: 0.75rem 1.5rem;
+	padding: 0.5rem 1rem;
 	border-radius: 0.5rem;
 	text-decoration: none;
 	font-weight: 600;
 	transition: all 0.3s ease;
 	border: none;
 	cursor: pointer;
+	font-size: 0.9rem;
 }
 
 .error-actions a:hover {
@@ -97,39 +102,6 @@ body {
 }
 
 @media (max-width: 768px) {
-	.error-code {
-		font-size: 6rem;
-	}
-
-	.error-title {
-		font-size: 2rem;
-	}
-
-	.error-message {
-		font-size: 1.1rem;
-	}
-
-	.error-image img {
-		width: 250px;
-		height: 250px;
-	}
-
-	.error-actions {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.error-actions a {
-		width: 100%;
-		text-align: center;
-	}
-}
-
-@media (max-width: 480px) {
-	.error-content {
-		padding: 2rem;
-	}
-
 	.error-code {
 		font-size: 4rem;
 	}
@@ -143,7 +115,41 @@ body {
 	}
 
 	.error-image img {
-		width: 200px;
-		height: 200px;
+		width: 150px;
+		height: 150px;
+	}
+
+	.error-actions {
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.error-actions a {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.error-content {
+		padding: 1.5rem;
+	}
+
+	.error-code {
+		font-size: 3rem;
+	}
+
+	.error-title {
+		font-size: 1.5rem;
+	}
+
+	.error-message {
+		font-size: 0.9rem;
+	}
+
+	.error-image img {
+		width: 120px;
+		height: 120px;
 	}
 }
