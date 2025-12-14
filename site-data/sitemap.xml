@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
 	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-	<!-- Website-Changelog Page -->
+	<!-- Games Page -->
 	<url>
 		<loc>https://games.heatlabs.net</loc>
 		<lastmod>2025-12-04</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
+	</url>
+	<!-- Alpha 3 Playtest Page -->
+	<url>
+		<loc>https://games.heatlabs.net/games/alpha-3-playtest</loc>
+		<lastmod>2025-12-04</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<!-- Roulette Page -->
+	<url>
+		<loc>https://games.heatlabs.net/games/roulette</loc>
+		<lastmod>2025-12-04</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<!-- Tier List Page -->
+	<url>
+		<loc>https://games.heatlabs.netgames/tierlist</loc>
+		<lastmod>2025-12-04</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<!-- Wordle Page -->
+	<url>
+		<loc>https://games.heatlabs.netgames/wordle</loc>
+		<lastmod>2025-12-04</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.8</priority>
 	</url>
 </urlset>
