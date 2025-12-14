@@ -57,23 +57,6 @@ body {
 	line-height: 1.5;
 }
 
-.error-image {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-	margin-bottom: 1rem;
-}
-
-.error-image img {
-	width: 200px;
-	height: 200px;
-	border-radius: 0.5rem;
-	object-fit: cover;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	border: 2px solid #333;
-}
-
 .error-actions {
 	display: flex;
 	gap: 1rem;
@@ -114,11 +97,6 @@ body {
 		font-size: 1rem;
 	}
 
-	.error-image img {
-		width: 150px;
-		height: 150px;
-	}
-
 	.error-actions {
 		flex-direction: column;
 		align-items: center;
@@ -146,10 +124,5 @@ body {
 
 	.error-message {
 		font-size: 0.9rem;
-	}
-
-	.error-image img {
-		width: 120px;
-		height: 120px;
 	}
 }
