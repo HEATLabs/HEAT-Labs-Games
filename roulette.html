@@ -101,6 +101,69 @@
       .back-button:hover {
         background-color: #e67600;
       }
+
+      #page-transition-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #121212;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+      }
+
+      #transition-logo {
+        width: 150px;
+        height: auto;
+        max-width: 80vw;
+        max-height: 80vh;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      #small-screen-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #121212;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+      }
+
+      #small-screen-logo {
+        width: 150px;
+        height: auto;
+        max-width: 80vw;
+        max-height: 80vh;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+      }
+
+      /* Also add opacity transitions to body and page-header */
+      body {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .page-header {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
     </style>
     <!-- Favicon for all browsers -->
     <link rel="icon" href="assets/images/favicons/favicon.ico" type="image/x-icon">
@@ -162,7 +225,15 @@
     <meta name="twitter:image" content="assets/images/social-share/HEATLabs.png">
     <meta name="twitter:image:alt" content="HEAT Labs - Your one-stop solution for comprehensive statistics insights and guides for World of Tanks: HEAT">
   </head>
-  <body>
+  <body style="opacity: 0;">
+    <!-- Transition Overlay (Visible by default) -->
+    <div id="page-transition-overlay">
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+        <img id="transition-logo" src="assets/images/logo/logo_transparent_white.png" alt="HEAT Labs Logo">
+      </div>
+    </div>
+    <!-- Small Screen Overlay -->
+    <div id="small-screen-overlay"></div>
     <div class="page-header">
       <div class="page-title-container">
         <a href="index.html" class="back-button">
@@ -174,7 +245,229 @@
       </div>
     </div>
     <script src="assets/js/pages/roulette.js"></script>
-    <script src="window-check.js"></script>
-    <script src="transition.js"></script>
+    <script>
+      // Integrated scripts for all pages
+      const PAGE_CONFIG = {
+        minWidth: 200,
+        minHeight: 300,
+        logoPath: 'assets/images/logo/logo_transparent_white.png',
+        logoSize: '150px',
+        logoAlt: 'HEAT Labs Logo',
+        backgroundColor: '#121212',
+        fadeInDuration: 250,
+        fadeOutDuration: 250,
+        checkInterval: 50,
+        transitionDuration: 500,
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+      };
+
+      // Initial page load transition
+      document.addEventListener('DOMContentLoaded', function() {
+        const overlay = document.getElementById('page-transition-overlay');
+        const body = document.body;
+        const header = document.querySelector('.page-header');
+
+        // Fade in content
+        setTimeout(function() {
+          body.style.opacity = '1';
+          body.style.transition = 'opacity 0.3s ease';
+
+          if (header) {
+            header.style.opacity = '1';
+            header.style.transition = 'opacity 0.3s ease 0.1s';
+          }
+
+          // Fade out overlay
+          setTimeout(function() {
+            if (overlay) {
+              overlay.style.opacity = '0';
+              setTimeout(function() {
+                if (overlay) overlay.style.display = 'none';
+              }, 500);
+            }
+          }, 300);
+        }, 100);
+      });
+
+      // Small screen checking
+      (function() {
+        let smallScreenOverlay = null;
+        let isSmallScreenVisible = false;
+        let screenCheckTimeout = null;
+
+        function createSmallScreenOverlay() {
+          smallScreenOverlay = document.getElementById('small-screen-overlay');
+          if (!smallScreenOverlay) {
+            smallScreenOverlay = document.createElement('div');
+            smallScreenOverlay.id = 'small-screen-overlay';
+            smallScreenOverlay.style.cssText = `
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background-color: ${PAGE_CONFIG.backgroundColor};
+              display: none;
+              justify-content: center;
+              align-items: center;
+              z-index: 10000;
+              opacity: 0;
+              transition: opacity ${PAGE_CONFIG.fadeOutDuration}ms ease-out;
+            `;
+
+            const logo = document.createElement('img');
+            logo.id = 'small-screen-logo';
+            logo.src = PAGE_CONFIG.logoPath;
+            logo.alt = PAGE_CONFIG.logoAlt;
+            logo.style.cssText = `
+              width: ${PAGE_CONFIG.logoSize};
+              height: auto;
+              max-width: 80vw;
+              max-height: 80vh;
+              object-fit: contain;
+              filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            `;
+
+            const logoContainer = document.createElement('div');
+            logoContainer.style.cssText = `
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              padding: 20px;
+            `;
+
+            logo.onerror = function() {
+              logo.style.display = 'none';
+              const fallbackText = document.createElement('div');
+              fallbackText.textContent = 'HEAT LABS';
+              fallbackText.style.cssText = `
+                font-size: 32px;
+                font-weight: bold;
+                color: #ff8300;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+              `;
+              logoContainer.appendChild(fallbackText);
+            };
+
+            logoContainer.appendChild(logo);
+            smallScreenOverlay.appendChild(logoContainer);
+            document.body.appendChild(smallScreenOverlay);
+          }
+        }
+
+        function checkScreenSize() {
+          const isTooSmall = window.innerWidth < PAGE_CONFIG.minWidth || window.innerHeight < PAGE_CONFIG.minHeight;
+
+          if (isTooSmall && !isSmallScreenVisible) {
+            showSmallScreenOverlay();
+          } else if (!isTooSmall && isSmallScreenVisible) {
+            hideSmallScreenOverlay();
+          }
+        }
+
+        function showSmallScreenOverlay() {
+          isSmallScreenVisible = true;
+          smallScreenOverlay.style.display = 'flex';
+          void smallScreenOverlay.offsetHeight;
+          smallScreenOverlay.style.transition = `opacity ${PAGE_CONFIG.fadeInDuration}ms ease-in`;
+          requestAnimationFrame(function() {
+            smallScreenOverlay.style.opacity = '1';
+          });
+
+          const header = document.querySelector('.page-header');
+          if (header) header.style.display = 'none';
+        }
+
+        function hideSmallScreenOverlay() {
+          isSmallScreenVisible = false;
+          smallScreenOverlay.style.transition = `opacity ${PAGE_CONFIG.fadeOutDuration}ms ease-out`;
+          smallScreenOverlay.style.opacity = '0';
+          setTimeout(function() {
+            if (!isSmallScreenVisible) {
+              smallScreenOverlay.style.display = 'none';
+              const header = document.querySelector('.page-header');
+              if (header) header.style.display = 'flex';
+            }
+          }, PAGE_CONFIG.fadeOutDuration);
+        }
+
+        function debounceCheck() {
+          if (screenCheckTimeout) clearTimeout(screenCheckTimeout);
+          screenCheckTimeout = setTimeout(checkScreenSize, PAGE_CONFIG.checkInterval);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          createSmallScreenOverlay();
+          setTimeout(checkScreenSize, 100);
+          window.addEventListener('resize', debounceCheck);
+        });
+      })();
+
+      // Page transitions for navigation
+      (function() {
+        let transitionOverlay = null;
+        let isTransitioning = false;
+
+        function createTransitionOverlay() {
+          transitionOverlay = document.getElementById('page-transition-overlay');
+        }
+
+        function showTransitionOverlay() {
+          if (isTransitioning) return;
+          isTransitioning = true;
+
+          transitionOverlay.style.display = 'flex';
+          transitionOverlay.style.pointerEvents = 'auto';
+          void transitionOverlay.offsetHeight;
+
+          transitionOverlay.style.transition = `opacity 10ms ${PAGE_CONFIG.easing}`;
+          requestAnimationFrame(function() {
+            transitionOverlay.style.opacity = '1';
+            const logo = document.getElementById('transition-logo');
+            if (logo) {
+              setTimeout(function() {
+                logo.style.opacity = '1';
+                logo.style.transform = 'scale(1)';
+              }, 50);
+            }
+          });
+        }
+
+        function handleBackButtonClick(e) {
+          const link = e.currentTarget;
+          const href = link.getAttribute('href');
+
+          if (href === '#' || href.includes('://')) return;
+
+          e.preventDefault();
+          showTransitionOverlay();
+
+          setTimeout(function() {
+            window.location.href = href;
+          }, PAGE_CONFIG.transitionDuration + 100);
+        }
+
+        function setupEventListeners() {
+          const backButton = document.querySelector('.back-button');
+          if (backButton) {
+            backButton.addEventListener('click', handleBackButtonClick);
+          }
+
+          window.addEventListener('beforeunload', function() {
+            if (!isTransitioning) {
+              showTransitionOverlay();
+            }
+          });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          createTransitionOverlay();
+          setupEventListeners();
+        });
+      })();
+    </script>
   </body>
 </html>

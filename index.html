@@ -39,6 +39,8 @@
         min-height: 60px;
         width: 100%;
         box-sizing: border-box;
+        opacity: 0;
+        transition: opacity 0.3s ease;
       }
 
       .page-title-container {
@@ -88,6 +90,8 @@
         margin: 0;
         padding: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        opacity: 0;
+        transition: opacity 0.3s ease;
       }
 
       /* Ensure full width for Discord */
@@ -110,6 +114,8 @@
         flex-direction: column;
         padding: 20px;
         box-sizing: border-box;
+        opacity: 0;
+        transition: opacity 0.3s ease;
       }
 
       .games-grid {
@@ -210,6 +216,60 @@
       body {
         overflow: hidden;
       }
+
+      /* Transition Overlay Styles */
+      #page-transition-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #121212;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+      }
+
+      #transition-logo {
+        width: 150px;
+        height: auto;
+        max-width: 80vw;
+        max-height: 80vh;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* Small Screen Overlay */
+      #small-screen-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #121212;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 10000;
+        opacity: 0;
+        transition: opacity 0.2s ease-out;
+      }
+
+      #small-screen-logo {
+        width: 150px;
+        height: auto;
+        max-width: 80vw;
+        max-height: 80vh;
+        object-fit: contain;
+        filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+      }
     </style>
     <!-- Favicon for all browsers -->
     <link rel="icon" href="assets/images/favicons/favicon.ico" type="image/x-icon">
@@ -271,10 +331,18 @@
     <meta name="twitter:image" content="images/social-share/Games.png">
     <meta name="twitter:image:alt" content="HEAT Labs - Your one-stop solution for comprehensive statistics insights and guides for World of Tanks: HEAT">
   </head>
-  <body>
+  <body style="opacity: 0;">
+    <!-- Transition Overlay (Visible by default) -->
+    <div id="page-transition-overlay">
+      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+        <img id="transition-logo" src="assets/images/logo/logo_transparent_white.png" alt="HEAT Labs Logo">
+      </div>
+    </div>
+    <!-- Small Screen Overlay -->
+    <div id="small-screen-overlay"></div>
     <div class="page-header">
       <div class="page-title-container">
-        <a href="#" class="back-button">
+        <a href="#" class="back-button refresh-button">
           <i class="fas fa-rotate"></i> Refresh </a>
         <div>
           <h1 class="page-title">HEAT Labs Games</h1>
@@ -314,7 +382,453 @@
         </div>
       </div>
     </div>
-    <script src="window-check.js"></script>
-    <script src="reload.js"></script>
+    <script>
+      // Configuration for all functionality
+      const CONFIG = {
+        // Screen size checking
+        minWidth: 200,
+        minHeight: 300,
+        logoPath: 'assets/images/logo/logo_transparent_white.png',
+        logoSize: '150px',
+        logoAlt: 'HEAT Labs Logo',
+        backgroundColor: '#121212',
+        fadeInDuration: 250,
+        fadeOutDuration: 250,
+        checkInterval: 50,
+
+        // Transition configuration
+        transitionDuration: 500,
+        easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+
+        // Refresh configuration
+        refreshIconClass: 'fa-rotate',
+        refreshButtonText: 'Refresh',
+        refreshDuration: 1000
+      };
+
+      (function initPageLoad() {
+        // Hide content initially (already hidden via inline style)
+        // When DOM is loaded, start the fade-in sequence
+        document.addEventListener('DOMContentLoaded', function() {
+          const overlay = document.getElementById('page-transition-overlay');
+          const body = document.body;
+          const header = document.querySelector('.page-header');
+          const gamesContainer = document.querySelector('.games-container');
+
+          // Show content with opacity 0 initially
+          if (header) header.style.opacity = '0';
+          if (gamesContainer) gamesContainer.style.opacity = '0';
+
+          // Fade in the main content
+          setTimeout(function() {
+            body.style.opacity = '1';
+            body.style.transition = 'opacity 0.3s ease';
+
+            if (header) {
+              header.style.opacity = '1';
+              header.style.transition = 'opacity 0.3s ease 0.1s';
+            }
+
+            if (gamesContainer) {
+              gamesContainer.style.opacity = '1';
+              gamesContainer.style.transition = 'opacity 0.3s ease 0.2s';
+            }
+
+            // Fade out the overlay
+            setTimeout(function() {
+              if (overlay) {
+                overlay.style.opacity = '0';
+                setTimeout(function() {
+                  if (overlay) overlay.style.display = 'none';
+                }, 500);
+              }
+            }, 300);
+          }, 100);
+        });
+      })();
+
+      (function initScreenCheck() {
+        let smallScreenOverlay = null;
+        let smallScreenLogo = null;
+        let isSmallScreenVisible = false;
+        let screenCheckTimeout = null;
+
+        function createSmallScreenOverlay() {
+          smallScreenOverlay = document.getElementById('small-screen-overlay');
+          if (!smallScreenOverlay) {
+            smallScreenOverlay = document.createElement('div');
+            smallScreenOverlay.id = 'small-screen-overlay';
+            smallScreenOverlay.style.cssText = `
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background-color: ${CONFIG.backgroundColor};
+              display: none;
+              justify-content: center;
+              align-items: center;
+              z-index: 10000;
+              opacity: 0;
+              transition: opacity ${CONFIG.fadeOutDuration}ms ease-out;
+            `;
+
+            smallScreenLogo = document.createElement('img');
+            smallScreenLogo.id = 'small-screen-logo';
+            smallScreenLogo.src = CONFIG.logoPath;
+            smallScreenLogo.alt = CONFIG.logoAlt;
+            smallScreenLogo.style.cssText = `
+              width: ${CONFIG.logoSize};
+              height: auto;
+              max-width: 80vw;
+              max-height: 80vh;
+              object-fit: contain;
+              filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            `;
+
+            const logoContainer = document.createElement('div');
+            logoContainer.style.cssText = `
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              padding: 20px;
+            `;
+
+            smallScreenLogo.onerror = function() {
+              smallScreenLogo.style.display = 'none';
+              const fallbackText = document.createElement('div');
+              fallbackText.textContent = 'HEAT LABS';
+              fallbackText.style.cssText = `
+                font-size: 32px;
+                font-weight: bold;
+                color: #ff8300;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+              `;
+              logoContainer.appendChild(fallbackText);
+            };
+
+            logoContainer.appendChild(smallScreenLogo);
+            smallScreenOverlay.appendChild(logoContainer);
+            document.body.appendChild(smallScreenOverlay);
+          }
+        }
+
+        function checkScreenSize() {
+          const isTooSmall = window.innerWidth < CONFIG.minWidth || window.innerHeight < CONFIG.minHeight;
+
+          if (isTooSmall && !isSmallScreenVisible) {
+            showSmallScreenOverlay();
+          } else if (!isTooSmall && isSmallScreenVisible) {
+            hideSmallScreenOverlay();
+          }
+        }
+
+        function showSmallScreenOverlay() {
+          isSmallScreenVisible = true;
+          smallScreenOverlay.style.display = 'flex';
+          void smallScreenOverlay.offsetHeight;
+          smallScreenOverlay.style.transition = `opacity ${CONFIG.fadeInDuration}ms ease-in`;
+          requestAnimationFrame(function() {
+            smallScreenOverlay.style.opacity = '1';
+          });
+
+          const header = document.querySelector('.page-header');
+          const gamesContainer = document.querySelector('.games-container');
+          if (header) header.style.display = 'none';
+          if (gamesContainer) gamesContainer.style.display = 'none';
+        }
+
+        function hideSmallScreenOverlay() {
+          isSmallScreenVisible = false;
+          smallScreenOverlay.style.transition = `opacity ${CONFIG.fadeOutDuration}ms ease-out`;
+          smallScreenOverlay.style.opacity = '0';
+          setTimeout(function() {
+            if (!isSmallScreenVisible) {
+              smallScreenOverlay.style.display = 'none';
+              const header = document.querySelector('.page-header');
+              const gamesContainer = document.querySelector('.games-container');
+              if (header) header.style.display = 'flex';
+              if (gamesContainer) gamesContainer.style.display = 'flex';
+            }
+          }, CONFIG.fadeOutDuration);
+        }
+
+        function debounceCheck() {
+          if (screenCheckTimeout) clearTimeout(screenCheckTimeout);
+          screenCheckTimeout = setTimeout(checkScreenSize, CONFIG.checkInterval);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          createSmallScreenOverlay();
+          setTimeout(checkScreenSize, 100);
+          window.addEventListener('resize', debounceCheck);
+          window.addEventListener('load', checkScreenSize);
+        });
+      })();
+
+      (function initTransitions() {
+        let isTransitioning = false;
+        let isOverlayVisible = false;
+        let transitionOverlay = null;
+        let transitionLogo = null;
+
+        function createTransitionOverlay() {
+          transitionOverlay = document.getElementById('page-transition-overlay');
+          transitionLogo = document.getElementById('transition-logo');
+
+          if (!transitionOverlay) {
+            transitionOverlay = document.createElement('div');
+            transitionOverlay.id = 'page-transition-overlay';
+            transitionOverlay.style.cssText = `
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background-color: ${CONFIG.backgroundColor};
+              display: none;
+              justify-content: center;
+              align-items: center;
+              z-index: 9999;
+              opacity: 0;
+              transition: opacity ${CONFIG.fadeOutDuration}ms ${CONFIG.easing};
+              pointer-events: none;
+            `;
+
+            transitionLogo = document.createElement('img');
+            transitionLogo.id = 'transition-logo';
+            transitionLogo.src = CONFIG.logoPath;
+            transitionLogo.alt = CONFIG.logoAlt;
+            transitionLogo.style.cssText = `
+              width: ${CONFIG.logoSize};
+              height: auto;
+              max-width: 80vw;
+              max-height: 80vh;
+              object-fit: contain;
+              filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+              opacity: 0;
+              transform: scale(0.8);
+              transition: all ${CONFIG.transitionDuration}ms ${CONFIG.easing};
+            `;
+
+            const logoContainer = document.createElement('div');
+            logoContainer.style.cssText = `
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              padding: 20px;
+            `;
+
+            transitionLogo.onerror = function() {
+              transitionLogo.style.display = 'none';
+              const fallbackText = document.createElement('div');
+              fallbackText.textContent = 'HEAT LABS';
+              fallbackText.style.cssText = `
+                font-size: 32px;
+                font-weight: bold;
+                color: #ff8300;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                opacity: 0;
+                transform: scale(0.8);
+                transition: all ${CONFIG.transitionDuration}ms ${CONFIG.easing};
+              `;
+              logoContainer.appendChild(fallbackText);
+              transitionLogo = fallbackText;
+            };
+
+            logoContainer.appendChild(transitionLogo);
+            transitionOverlay.appendChild(logoContainer);
+            document.body.appendChild(transitionOverlay);
+          }
+        }
+
+        function showTransitionOverlay() {
+          if (isTransitioning) return;
+          isTransitioning = true;
+          isOverlayVisible = true;
+
+          transitionOverlay.style.display = 'flex';
+          transitionOverlay.style.pointerEvents = 'auto';
+          void transitionOverlay.offsetHeight;
+
+          transitionOverlay.style.transition = `opacity 10ms ${CONFIG.easing}`;
+          requestAnimationFrame(function() {
+            transitionOverlay.style.opacity = '1';
+            setTimeout(function() {
+              if (transitionLogo) {
+                transitionLogo.style.opacity = '1';
+                transitionLogo.style.transform = 'scale(1)';
+              }
+            }, 50);
+          });
+        }
+
+        function hideTransitionOverlay() {
+          if (!isTransitioning || !isOverlayVisible) return;
+
+          if (transitionLogo) {
+            transitionLogo.style.opacity = '0';
+            transitionLogo.style.transform = 'scale(0.8)';
+          }
+
+          setTimeout(function() {
+            transitionOverlay.style.transition = `opacity ${CONFIG.fadeOutDuration}ms ${CONFIG.easing}`;
+            transitionOverlay.style.opacity = '0';
+            setTimeout(function() {
+              transitionOverlay.style.display = 'none';
+              transitionOverlay.style.pointerEvents = 'none';
+              isTransitioning = false;
+              isOverlayVisible = false;
+              if (transitionLogo) {
+                transitionLogo.style.opacity = '0';
+                transitionLogo.style.transform = 'scale(0.8)';
+              }
+            }, CONFIG.fadeOutDuration);
+          }, CONFIG.fadeOutDuration);
+        }
+
+        function handleLinkClick(e) {
+          const link = e.currentTarget;
+          const href = link.getAttribute('href');
+
+          if (href === '#' || href.includes('://') ||
+              link.classList.contains('refresh-button') ||
+              link.textContent.includes('Refresh')) {
+            return;
+          }
+
+          e.preventDefault();
+          showTransitionOverlay();
+          setTimeout(function() {
+            window.location.href = href;
+          }, CONFIG.transitionDuration + 100);
+        }
+
+        function setupEventListeners() {
+          const playButtons = document.querySelectorAll('.game-button');
+          playButtons.forEach(function(button) {
+            button.addEventListener('click', handleLinkClick);
+          });
+
+          const backButtons = document.querySelectorAll('.back-button');
+          backButtons.forEach(function(button) {
+            if (!button.textContent.includes('Refresh')) {
+              button.addEventListener('click', handleLinkClick);
+            }
+          });
+
+          window.addEventListener('pageshow', function() {
+            hideTransitionOverlay();
+          });
+
+          window.addEventListener('beforeunload', function() {
+            if (!isOverlayVisible) {
+              showTransitionOverlay();
+            }
+          });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          createTransitionOverlay();
+          setupEventListeners();
+
+          // Initial transition already handled by initPageLoad
+          // So we just ensure the overlay is hidden properly
+          setTimeout(function() {
+            hideTransitionOverlay();
+          }, 1000);
+        });
+      })();
+
+      (function initRefresh() {
+        function findRefreshButton() {
+          const buttons = document.querySelectorAll('.back-button');
+          for (const button of buttons) {
+            const icon = button.querySelector('i');
+            const text = button.textContent.trim();
+            if (icon && icon.classList.contains(CONFIG.refreshIconClass) &&
+                text.includes(CONFIG.refreshButtonText)) {
+              return button;
+            }
+          }
+          return null;
+        }
+
+        function handleRefreshClick(e) {
+          e.preventDefault();
+          const button = e.currentTarget;
+          button.style.pointerEvents = 'none';
+          button.style.opacity = '0.7';
+
+          const icon = button.querySelector('i');
+          if (icon) {
+            icon.style.transition = 'transform 0.3s ease';
+            icon.style.transform = 'rotate(180deg)';
+          }
+
+          const isDiscordActivity = window.location !== window.parent.location;
+          if (isDiscordActivity && window.parent) {
+            try {
+              window.parent.location.reload();
+            } catch (error) {
+              setTimeout(function() {
+                window.location.reload();
+              }, CONFIG.refreshDuration);
+            }
+          } else {
+            setTimeout(function() {
+              window.location.reload();
+            }, CONFIG.refreshDuration);
+          }
+
+          setTimeout(function() {
+            if (button) {
+              button.style.pointerEvents = '';
+              button.style.opacity = '';
+              if (icon) {
+                icon.style.transform = '';
+              }
+            }
+          }, CONFIG.refreshDuration + 1000);
+        }
+
+        function setupRefreshButton() {
+          const refreshButton = findRefreshButton();
+          if (refreshButton) {
+            refreshButton.classList.add('refresh-button');
+            const newButton = refreshButton.cloneNode(true);
+            refreshButton.parentNode.replaceChild(newButton, refreshButton);
+            newButton.addEventListener('click', handleRefreshClick);
+            newButton.addEventListener('mouseenter', function() {
+              const icon = newButton.querySelector('i');
+              if (icon) {
+                icon.style.transition = 'transform 0.3s ease';
+              }
+            });
+            return newButton;
+          }
+          return null;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          const isIndexPage = window.location.pathname.endsWith('index.html') ||
+              window.location.pathname.endsWith('/') ||
+              window.location.pathname === '';
+
+          if (isIndexPage) {
+            const refreshButton = setupRefreshButton();
+            if (refreshButton) {
+              console.log('Refresh button initialized for Discord activity');
+            }
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
