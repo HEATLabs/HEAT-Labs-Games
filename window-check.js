@@ -9,7 +9,7 @@ const CONFIG = {
     backgroundColor: '#121212',
     fadeInDuration: 300,
     fadeOutDuration: 200,
-    checkInterval: 250
+    checkInterval: 50
 };
 
 // Initialize when DOM is ready
