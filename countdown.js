@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show notification popup
     function showNotification() {
+        // Remove any stored dismissal to show every time
+        localStorage.removeItem('noticeDismissed');
+
         setTimeout(() => {
             speculationNotice.classList.add('show');
             // Add overlay
