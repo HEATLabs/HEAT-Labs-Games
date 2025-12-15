@@ -409,65 +409,6 @@
         border-color: #ff8300;
       }
 
-      /* Action Buttons */
-      .action-buttons {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 24px;
-      }
-
-      .action-button {
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        border: none;
-        font-family: inherit;
-        font-size: 16px;
-      }
-
-      .action-button i {
-        font-size: 18px;
-      }
-
-      .reset-button {
-        background-color: #f44336;
-        color: white;
-      }
-
-      .reset-button:hover {
-        background-color: #d32f2f;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
-      }
-
-      .save-button {
-        background-color: #4CAF50;
-        color: white;
-      }
-
-      .save-button:hover {
-        background-color: #388E3C;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
-      }
-
-      .share-button {
-        background-color: #2196F3;
-        color: white;
-      }
-
-      .share-button:hover {
-        background-color: #0b7dda;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
-      }
-
       /* Load Section */
       .load-section {
         margin-top: 24px;
@@ -579,16 +520,6 @@
           width: 90px;
           height: 65px;
         }
-
-        .action-buttons {
-          flex-direction: column;
-          gap: 12px;
-        }
-
-        .action-button {
-          width: 100%;
-          justify-content: center;
-        }
       }
 
       @media (max-width: 480px) {
@@ -608,11 +539,6 @@
 
         .tier-option-icon {
           font-size: 32px;
-        }
-
-        .action-button {
-          padding: 10px;
-          font-size: 14px;
         }
 
         .load-container {
@@ -785,15 +711,6 @@
         <!-- Unranked Items -->
         <div class="unranked-section">
           <div id="unrankedItems" class="unranked-items"></div>
-        </div>
-        <!-- Action Buttons -->
-        <div class="action-buttons">
-          <button id="resetTierList" class="action-button reset-button">
-            <i class="fas fa-redo"></i> Reset </button>
-          <button id="saveTierList" class="action-button save-button">
-            <i class="fas fa-save"></i> Save </button>
-          <button id="shareTierList" class="action-button share-button">
-            <i class="fas fa-share-alt"></i> Share </button>
         </div>
       </div>
     </div>

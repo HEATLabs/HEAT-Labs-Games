@@ -12,11 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tierListTitle = document.getElementById('tierListTitle');
     const unrankedItems = document.getElementById('unrankedItems');
     const backButton = document.getElementById('backButton');
-    const resetButton = document.getElementById('resetTierList');
-    const saveButton = document.getElementById('saveTierList');
-    const shareButton = document.getElementById('shareTierList');
-    const loadInput = document.getElementById('loadTierListInput');
-    const loadButton = document.getElementById('loadTierListButton');
 
     // Game state
     let currentCategory = '';
@@ -41,13 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         backButton.addEventListener('click', showSelectionScreen);
-        resetButton.addEventListener('click', resetTierList);
-        saveButton.addEventListener('click', saveTierList);
-        shareButton.addEventListener('click', shareTierList);
-        loadButton.addEventListener('click', loadTierList);
-
-        // Load saved tier list if any
-        loadSavedTierList();
     }
 
     // Handle category selection
@@ -406,9 +394,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 tierState[targetTier].push(itemId);
                 dropZone.appendChild(dragItem);
             }
-
-            // Save state
-            saveTierListState();
         }
 
         // Clean up
@@ -471,137 +456,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentCategory = '';
         items = [];
         tierState = {};
-    }
-
-    // Reset tier list
-    function resetTierList() {
-        if (confirm('Are you sure you want to reset the tier list? All current rankings will be lost.')) {
-            initializeTierState();
-            renderItems();
-            initDragAndDrop();
-            saveTierListState();
-            showNotification('Tier list reset successfully');
-        }
-    }
-
-    // Save tier list
-    function saveTierList() {
-        saveTierListState();
-        showNotification('Tier list saved successfully');
-    }
-
-    // Save tier list state to localStorage
-    function saveTierListState() {
-        if (!currentCategory) return;
-
-        const state = {
-            category: currentCategory,
-            tierState: tierState,
-            timestamp: new Date().toISOString()
-        };
-
-        localStorage.setItem('heatTierList_' + currentCategory, JSON.stringify(state));
-    }
-
-    // Load saved tier list
-    function loadSavedTierList() {
-        // Check if there's a saved tier list in the URL
-        const urlParams = new URLSearchParams(window.location.search);
-        const shareData = urlParams.get('data');
-
-        if (shareData) {
-            try {
-                const decodedData = decodeURIComponent(shareData);
-                const sharedState = JSON.parse(decodedData);
-                loadSharedTierList(sharedState);
-                loadInput.value = window.location.href;
-            } catch (error) {
-                console.error('Error loading shared tier list:', error);
-                showNotification('Invalid shared tier list URL', 'error');
-            }
-        }
-    }
-
-    // Load tier list from URL
-    async function loadTierList() {
-        const url = loadInput.value.trim();
-
-        if (!url) {
-            showNotification('Please enter a tier list URL', 'error');
-            return;
-        }
-
-        try {
-            // Extract data from URL
-            const urlObj = new URL(url);
-            const shareData = urlObj.searchParams.get('data');
-
-            if (!shareData) {
-                throw new Error('No tier list data found in URL');
-            }
-
-            const decodedData = decodeURIComponent(shareData);
-            const sharedState = JSON.parse(decodedData);
-
-            loadSharedTierList(sharedState);
-            showNotification('Tier list loaded successfully');
-        } catch (error) {
-            console.error('Error loading tier list:', error);
-            showNotification('Invalid tier list URL', 'error');
-        }
-    }
-
-    // Load shared tier list
-    async function loadSharedTierList(sharedState) {
-        // Load the category data first
-        await loadCategoryData(sharedState.category);
-
-        if (items.length === 0) {
-            showNotification('Failed to load category data', 'error');
-            return;
-        }
-
-        currentCategory = sharedState.category;
-        tierState = sharedState.tierState;
-
-        tierListTitle.textContent = currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1) + ' Tier List';
-
-        // Show tier list creator
-        showTierListCreator();
-
-        // Render items
-        renderItems();
-
-        // Initialize drag and drop
-        setTimeout(() => {
-            initDragAndDrop();
-        }, 100);
-    }
-
-    // Share tier list
-    function shareTierList() {
-        if (!currentCategory) {
-            showNotification('Please create a tier list first', 'error');
-            return;
-        }
-
-        const state = {
-            category: currentCategory,
-            tierState: tierState,
-            timestamp: new Date().toISOString()
-        };
-
-        // Create shareable URL
-        const shareData = encodeURIComponent(JSON.stringify(state));
-        const shareUrl = window.location.origin + window.location.pathname + '?data=' + shareData;
-
-        // Copy to clipboard
-        navigator.clipboard.writeText(shareUrl).then(() => {
-            showNotification('Share URL copied to clipboard!');
-        }).catch(err => {
-            console.error('Failed to copy:', err);
-            showNotification('Failed to copy URL', 'error');
-        });
     }
 
     // Show notification
