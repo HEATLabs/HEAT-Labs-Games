@@ -89,6 +89,9 @@
         margin: 0;
         padding: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
 
       /* Ensure full width for Discord */
@@ -101,6 +104,437 @@
 
       .back-button:hover {
         background-color: #e67600;
+      }
+
+      /* Main content */
+      .main-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      /* Selector Container */
+      .selector-container {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Selector Wrapper */
+      .selector-wrapper {
+        position: relative;
+        margin: 2rem auto;
+        width: 90%;
+        max-width: 800px;
+        height: 200px;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: #1e1e1e;
+        border: 2px solid #333;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Selector Wheel */
+      .selector-wheel {
+        display: flex;
+        height: 100%;
+        transition: transform 0.1s ease-out;
+        will-change: transform;
+      }
+
+      /* Result Container */
+      .result-container {
+        margin: 1.5rem auto;
+        max-width: 500px;
+        width: 100%;
+      }
+
+      .result-card {
+        background-color: #252525;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        border: 2px solid #333;
+        transition: all 0.5s ease;
+        opacity: 1;
+        transform: translateY(0);
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        gap: 2rem;
+        min-height: 180px;
+      }
+
+      .result-card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Default state */
+      .result-card.placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      /* Tank result state */
+      .result-card.tank-result {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+        gap: 2rem;
+      }
+
+      .result-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
+      }
+
+      .result-placeholder i {
+        font-size: 3rem;
+        color: #ff8300;
+        opacity: 0.7;
+      }
+
+      .result-placeholder h3 {
+        font-size: 1.8rem;
+        margin: 0;
+        color: #ffffff;
+        font-weight: 600;
+      }
+
+      .result-placeholder p {
+        font-size: 1rem;
+        color: #b0b0b0;
+        margin: 0;
+        max-width: 300px;
+        line-height: 1.4;
+      }
+
+      .result-image-container {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 140px;
+      }
+
+      .result-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-height: 140px;
+      }
+
+      .result-info {
+        flex: 1;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .result-info h3 {
+        font-size: 1.8rem;
+        margin: 0 0 1rem 0;
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .result-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .result-meta span {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+        color: #e0e0e0;
+      }
+
+      .result-meta i {
+        color: #ff8300;
+        width: 20px;
+      }
+
+      /* Spin Container */
+      .spin-container {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      /* Selector Items */
+      .selector-item {
+        min-width: 180px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background-color: #252525;
+        border-right: 1px solid #333;
+        transition: all 0.3s ease;
+      }
+
+      .selector-item img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        margin-bottom: 0.5rem;
+      }
+
+      .selector-item h4 {
+        font-size: 0.95rem;
+        margin: 0;
+        color: #e0e0e0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+        font-weight: 500;
+      }
+
+      /* Selector Indicator */
+      .selector-indicator {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+        height: 100%;
+        background-color: #ff8300;
+        z-index: 10;
+        box-shadow: 0 0 15px rgba(255, 131, 0, 0.7);
+      }
+
+      .selector-indicator::before,
+      .selector-indicator::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ff8300;
+      }
+
+      .selector-indicator::before {
+        top: 0;
+        box-shadow: 0 0 10px rgba(255, 131, 0, 0.7);
+      }
+
+      .selector-indicator::after {
+        bottom: 0;
+        box-shadow: 0 0 10px rgba(255, 131, 0, 0.7);
+      }
+
+      .spin-button {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        background-color: #ff8300;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        box-shadow: 0 4px 12px rgba(255, 131, 0, 0.3);
+      }
+
+      .spin-button:hover:not(:disabled) {
+        transform: scale(1.05);
+        box-shadow: 0 6px 18px rgba(255, 131, 0, 0.5);
+        background-color: #e67600;
+      }
+
+      .spin-button:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none !important;
+        box-shadow: none !important;
+      }
+
+      .spin-counter {
+        font-size: 0.9rem;
+        color: #b0b0b0;
+        padding: 0.5rem 1rem;
+        background-color: #252525;
+        border-radius: 20px;
+        border: 1px solid #333;
+        display: block;
+        /* Always visible */
+      }
+
+      /* Loading State */
+      .loading-message {
+        text-align: center;
+        padding: 3rem;
+        color: #b0b0b0;
+        font-size: 1.1rem;
+      }
+
+      .loading-message i {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #ff8300;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .selector-wrapper {
+          height: 170px;
+          width: 95%;
+        }
+
+        .selector-item {
+          min-width: 150px;
+        }
+
+        .selector-item img {
+          width: 60px;
+          height: 60px;
+        }
+
+        .selector-item h4 {
+          font-size: 0.85rem;
+        }
+
+        .result-card {
+          flex-direction: column;
+          padding: 1.5rem;
+          gap: 1.5rem;
+          text-align: center;
+        }
+
+        .result-card.tank-result {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .result-image-container {
+          width: 180px;
+          height: 120px;
+        }
+
+        .result-info {
+          text-align: center;
+        }
+
+        .result-info h3 {
+          font-size: 1.5rem;
+        }
+
+        .result-meta {
+          align-items: center;
+        }
+
+        .result-placeholder h3 {
+          font-size: 1.5rem;
+        }
+
+        .result-placeholder i {
+          font-size: 2.5rem;
+        }
+
+        .spin-button {
+          padding: 0.9rem 2rem;
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .selector-wrapper {
+          height: 150px;
+        }
+
+        .selector-item {
+          min-width: 130px;
+        }
+
+        .selector-item img {
+          width: 50px;
+          height: 50px;
+        }
+
+        .result-card {
+          padding: 1rem;
+          gap: 1rem;
+          min-height: 160px;
+        }
+
+        .result-image-container {
+          width: 150px;
+          height: 100px;
+        }
+
+        .result-info h3 {
+          font-size: 1.3rem;
+        }
+
+        .result-meta span {
+          font-size: 1rem;
+        }
+
+        .result-placeholder h3 {
+          font-size: 1.3rem;
+        }
+
+        .result-placeholder i {
+          font-size: 2rem;
+        }
+
+        .result-placeholder p {
+          font-size: 0.9rem;
+        }
+
+        .spin-button {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      @keyframes itemPulse {
+        0% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.05);
+        }
+
+        100% {
+          transform: scale(1);
+        }
       }
     </style>
     <!-- Favicon for all browsers -->
@@ -174,7 +608,49 @@
         </div>
       </div>
     </div>
-    <script src="roulette.js"></script>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="selector-container">
+        <!-- Tank Wheel -->
+        <div class="selector-wrapper">
+          <div class="selector-indicator"></div>
+          <div class="selector-wheel" id="tankWheel">
+            <!-- Tank items will be loaded here -->
+          </div>
+        </div>
+        <!-- Result Display -->
+        <div class="result-container" id="resultContainer">
+          <div class="result-card placeholder" id="resultCard">
+            <div class="result-placeholder" id="resultPlaceholder">
+              <i class="fas fa-question-circle"></i>
+              <h3 id="placeholderTitle">Let fate choose a tank for you!</h3>
+              <p id="placeholderSubtitle">Click "Spin the Wheel" to start</p>
+            </div>
+            <!-- Tank result elements -->
+            <div class="result-image-container" id="tankImageContainer" style="display: none;">
+              <img id="resultImage" src="" alt="Selected Tank" class="result-image">
+            </div>
+            <div class="result-info" id="tankInfo" style="display: none;">
+              <h3 id="resultName">Tank Name</h3>
+              <div class="result-meta">
+                <span id="resultNation">
+                  <i class="fas fa-flag"></i> Nation </span>
+                <span id="resultType">
+                  <i class="fas fa-tag"></i> Type </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Spin Controls -->
+        <div class="spin-container">
+          <button class="spin-button" id="spinButton">
+            <i class="fas fa-random"></i>Spin the Wheel </button>
+          <div class="spin-counter" id="spinCounter"> Spins: <span id="spinCount">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="tank-selector.js"></script>
     <script src="window-check.js"></script>
   </body>
 </html>
