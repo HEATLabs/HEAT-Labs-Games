@@ -102,6 +102,538 @@
       .back-button:hover {
         background-color: #e67600;
       }
+
+      /* Tier List Container */
+      .tierlist-container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 0 16px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      /* Selection Screen */
+      .selection-screen {
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 20px;
+        border: 1px solid #333;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      .selection-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: white;
+        margin-bottom: 8px;
+      }
+
+      .selection-subtitle {
+        font-size: 16px;
+        color: #b0b0b0;
+        margin-bottom: 24px;
+      }
+
+      /* Tier Options Grid */
+      .tier-options-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .tier-option {
+        background-color: #252525;
+        border-radius: 10px;
+        padding: 20px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .tier-option:hover {
+        border-color: #ff8300;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      .tier-option-icon {
+        font-size: 40px;
+        color: #ff8300;
+        margin-bottom: 12px;
+      }
+
+      .tier-option h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 8px;
+      }
+
+      .tier-option p {
+        font-size: 14px;
+        color: #b0b0b0;
+        margin-bottom: 16px;
+        flex-grow: 1;
+      }
+
+      .select-button {
+        background-color: #ff8300;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: inherit;
+      }
+
+      .select-button:hover {
+        background-color: #e67600;
+        transform: scale(1.05);
+      }
+
+      /* Tier List Creator */
+      .tierlist-creator {
+        background-color: #1e1e1e;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 20px;
+        border: 1px solid #333;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        display: none;
+      }
+
+      .tierlist-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .tierlist-title {
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        margin: 0;
+      }
+
+      .back-button-creator {
+        background-color: #252525;
+        color: white;
+        border: 1px solid #444;
+        padding: 8px 16px;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: inherit;
+      }
+
+      .back-button-creator:hover {
+        background-color: #333;
+        border-color: #ff8300;
+      }
+
+      /* Tier Rows */
+      .tier-rows {
+        margin-bottom: 24px;
+        border: 1px solid #444;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .tier-row {
+        display: flex;
+        min-height: 80px;
+        background-color: #252525;
+        position: relative;
+      }
+
+      .tier-row:not(:last-child) {
+        border-bottom: 2px solid #444;
+      }
+
+      .tier-label {
+        width: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 28px;
+        color: #0e0e0e;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+      }
+
+      .tier-s {
+        background: linear-gradient(135deg, #7fff7f 0%, #5ac75a 100%);
+      }
+
+      .tier-a {
+        background: linear-gradient(135deg, #bfff7f 0%, #8fd75a 100%);
+      }
+
+      .tier-b {
+        background: linear-gradient(135deg, #ffff7f 0%, #d7d75a 100%);
+      }
+
+      .tier-c {
+        background: linear-gradient(135deg, #ffdf7f 0%, #d7b75a 100%);
+      }
+
+      .tier-d {
+        background: linear-gradient(135deg, #ffbf7f 0%, #d78f5a 100%);
+      }
+
+      .tier-f {
+        background: linear-gradient(135deg, #ff7f7f 0%, #d75a5a 100%);
+      }
+
+      .tier-items {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 8px;
+        gap: 8px;
+        min-height: 80px;
+        background-color: rgba(255, 255, 255, 0.05);
+      }
+
+      /* Tier Item */
+      .tier-item {
+        width: 100px;
+        height: 75px;
+        border-radius: 6px;
+        overflow: hidden;
+        cursor: grab;
+        position: relative;
+        transition: all 0.2s ease;
+        border: 2px solid transparent;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .tier-item:hover {
+        z-index: 10;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        border-color: #ff8300;
+      }
+
+      .tier-item.dragging {
+        opacity: 0.8;
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+      }
+
+      .tier-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .item-name {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        font-size: 12px;
+        padding: 4px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      /* Unranked Section */
+      .unranked-section {
+        margin-top: 24px;
+        background-color: #252525;
+        padding: 20px;
+        border-radius: 8px;
+        border: 2px dashed #444;
+        position: relative;
+      }
+
+      .unranked-section::before {
+        content: "Drag items here to unrank them";
+        position: absolute;
+        top: -12px;
+        left: 20px;
+        background-color: #1e1e1e;
+        padding: 0 10px;
+        font-size: 14px;
+        color: #b0b0b0;
+        font-weight: 600;
+      }
+
+      .unranked-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .unranked-title::before {
+        content: "↓";
+        font-size: 20px;
+        color: #ff8300;
+      }
+
+      .unranked-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 12px;
+        min-height: 120px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 6px;
+        transition: all 0.3s ease;
+      }
+
+      .unranked-items.drag-over {
+        background-color: rgba(255, 131, 0, 0.1);
+        border-color: #ff8300;
+      }
+
+      /* Action Buttons */
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .action-button {
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: none;
+        font-family: inherit;
+        font-size: 16px;
+      }
+
+      .action-button i {
+        font-size: 18px;
+      }
+
+      .reset-button {
+        background-color: #f44336;
+        color: white;
+      }
+
+      .reset-button:hover {
+        background-color: #d32f2f;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+      }
+
+      .save-button {
+        background-color: #4CAF50;
+        color: white;
+      }
+
+      .save-button:hover {
+        background-color: #388E3C;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+      }
+
+      .share-button {
+        background-color: #2196F3;
+        color: white;
+      }
+
+      .share-button:hover {
+        background-color: #0b7dda;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(33, 150, 243, 0.3);
+      }
+
+      /* Load Section */
+      .load-section {
+        margin-top: 24px;
+        background-color: #252525;
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid #444;
+        text-align: center;
+      }
+
+      .load-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: white;
+      }
+
+      .load-section p {
+        font-size: 14px;
+        color: #b0b0b0;
+        margin-bottom: 16px;
+      }
+
+      .load-container {
+        display: flex;
+        gap: 8px;
+        margin-top: 12px;
+      }
+
+      .load-input {
+        flex: 1;
+        padding: 10px;
+        background-color: #1e1e1e;
+        border: 1px solid #444;
+        border-radius: 6px;
+        color: white;
+        font-family: inherit;
+        font-size: 14px;
+      }
+
+      .load-input:focus {
+        outline: none;
+        border-color: #ff8300;
+      }
+
+      .load-button {
+        padding: 10px 20px;
+        background-color: #ff8300;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-family: inherit;
+        font-size: 14px;
+      }
+
+      .load-button:hover {
+        background-color: #e67600;
+      }
+
+      /* Notifications */
+      .notification {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+
+      .notification.error {
+        background-color: #f44336;
+      }
+
+      .notification.fade-out {
+        opacity: 0;
+      }
+
+      /* Drag and drop visual feedback */
+      .drag-over {
+        background-color: rgba(255, 131, 0, 0.1) !important;
+        border-color: #ff8300 !important;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .tierlist-container {
+          padding: 0 12px;
+        }
+
+        .tier-options-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .tier-label {
+          width: 60px;
+          font-size: 24px;
+        }
+
+        .tier-item {
+          width: 90px;
+          height: 65px;
+        }
+
+        .action-buttons {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .action-button {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .tier-item {
+          width: 80px;
+          height: 60px;
+        }
+
+        .tier-label {
+          width: 50px;
+          font-size: 20px;
+        }
+
+        .tier-option {
+          padding: 16px;
+        }
+
+        .tier-option-icon {
+          font-size: 32px;
+        }
+
+        .action-button {
+          padding: 10px;
+          font-size: 14px;
+        }
+
+        .load-container {
+          flex-direction: column;
+        }
+
+        .load-button {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 360px) {
+        .tier-item {
+          width: 70px;
+          height: 55px;
+        }
+
+        .item-name {
+          font-size: 11px;
+        }
+      }
     </style>
     <!-- Favicon for all browsers -->
     <link rel="icon" href="assets/images/favicons/favicon.ico" type="image/x-icon">
@@ -171,6 +703,98 @@
         <div>
           <h1 class="page-title">Tier List Creator</h1>
           <p class="page-subtitle">Create and share your rankings (Please click "Hide Chat" for the best experience)</p>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <div class="tierlist-container">
+      <!-- Selection Screen -->
+      <div id="selectionScreen" class="selection-screen">
+        <h2 class="selection-title">Choose a Category</h2>
+        <p class="selection-subtitle">Don't forget to save and share your tier list once it's complete!</p>
+        <div class="tier-options-grid">
+          <div class="tier-option" data-type="tanks">
+            <div class="tier-option-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3>Tanks</h3>
+            <p>Rank all available tanks from best to worst</p>
+            <button class="select-button">Select</button>
+          </div>
+          <div class="tier-option" data-type="maps">
+            <div class="tier-option-icon">
+              <i class="fas fa-map"></i>
+            </div>
+            <h3>Maps</h3>
+            <p>Rank all available maps from best to worst</p>
+            <button class="select-button">Select</button>
+          </div>
+          <div class="tier-option" data-type="agents">
+            <div class="tier-option-icon">
+              <i class="fas fa-user-secret"></i>
+            </div>
+            <h3>Agents</h3>
+            <p>Rank all available agents from best to worst</p>
+            <button class="select-button">Select</button>
+          </div>
+        </div>
+        <!-- Load Section -->
+        <div class="load-section">
+          <h3>Load a Tier List</h3>
+          <p>Paste a shared tier list URL below to load it</p>
+          <div class="load-container">
+            <input type="text" id="loadTierListInput" class="load-input" placeholder="Paste shared tier list URL here">
+            <button id="loadTierListButton" class="load-button">Load</button>
+          </div>
+        </div>
+      </div>
+      <!-- Tier List Creator -->
+      <div id="tierListCreator" class="tierlist-creator">
+        <div class="tierlist-header">
+          <h2 id="tierListTitle" class="tierlist-title"></h2>
+          <button id="backButton" class="back-button-creator">
+            <i class="fas fa-arrow-left"></i> Back </button>
+        </div>
+        <!-- Tier Rows -->
+        <div class="tier-rows">
+          <div class="tier-row" data-tier="S">
+            <div class="tier-label tier-s">S</div>
+            <div class="tier-items" data-tier="S"></div>
+          </div>
+          <div class="tier-row" data-tier="A">
+            <div class="tier-label tier-a">A</div>
+            <div class="tier-items" data-tier="A"></div>
+          </div>
+          <div class="tier-row" data-tier="B">
+            <div class="tier-label tier-b">B</div>
+            <div class="tier-items" data-tier="B"></div>
+          </div>
+          <div class="tier-row" data-tier="C">
+            <div class="tier-label tier-c">C</div>
+            <div class="tier-items" data-tier="C"></div>
+          </div>
+          <div class="tier-row" data-tier="D">
+            <div class="tier-label tier-d">D</div>
+            <div class="tier-items" data-tier="D"></div>
+          </div>
+          <div class="tier-row" data-tier="F">
+            <div class="tier-label tier-f">F</div>
+            <div class="tier-items" data-tier="F"></div>
+          </div>
+        </div>
+        <!-- Unranked Items -->
+        <div class="unranked-section">
+          <h3 class="unranked-title">Unranked Items</h3>
+          <div id="unrankedItems" class="unranked-items"></div>
+        </div>
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+          <button id="resetTierList" class="action-button reset-button">
+            <i class="fas fa-redo"></i> Reset </button>
+          <button id="saveTierList" class="action-button save-button">
+            <i class="fas fa-save"></i> Save </button>
+          <button id="shareTierList" class="action-button share-button">
+            <i class="fas fa-share-alt"></i> Share </button>
         </div>
       </div>
     </div>
