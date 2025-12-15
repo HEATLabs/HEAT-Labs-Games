@@ -43,7 +43,7 @@
         justify-content: space-between;
         position: sticky;
         top: 0;
-        z-index: 100;
+        z-index: 9999;
         min-height: 60px;
         width: 100%;
         box-sizing: border-box;
@@ -96,6 +96,10 @@
         margin: 0;
         padding: 0;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        overflow-x: hidden;
       }
 
       /* Ensure full width for Discord */
@@ -117,8 +121,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 40px 20px;
+        padding: 20px;
         text-align: center;
+        width: 100%;
       }
 
       .countdown-container {
@@ -126,11 +131,14 @@
         backdrop-filter: blur(20px);
         border-radius: 20px;
         padding: 40px;
-        margin: 20px;
+        margin: 20px auto;
         border: 1px solid rgba(255, 131, 0, 0.2);
         box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         max-width: 800px;
         width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
       .countdown-title {
@@ -154,6 +162,7 @@
         gap: 20px;
         flex-wrap: wrap;
         margin: 30px 0;
+        width: 100%;
       }
 
       .countdown-item {
@@ -185,6 +194,7 @@
       /* Simple mode (just seconds) */
       .countdown-timer.simple-mode {
         gap: 0;
+        justify-content: center;
       }
 
       .countdown-timer.simple-mode .countdown-item {
@@ -199,64 +209,91 @@
         display: none;
       }
 
+      /* Popup Overlay */
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 9998;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .popup-overlay.active {
+        display: block;
+        opacity: 1;
+      }
+
       /* Notification popup */
       .notification-popup {
         position: fixed;
-        bottom: 20px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%) scale(0.9);
         background: rgba(20, 20, 20, 0.95);
-        backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 131, 0, 0.3);
-        border-radius: 12px;
-        padding: 20px;
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        border: 1px solid rgba(255, 131, 0, 0.4);
+        border-radius: 16px;
+        padding: 30px;
         max-width: 500px;
         width: 90%;
-        z-index: 1000;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
         display: none;
-      }
-
-      .notification-popup p {
-        color: #e0e0e0;
-        font-size: 0.95rem;
-        line-height: 1.5;
-        margin-right: 30px;
+        opacity: 0;
+        transition: all 0.3s ease;
       }
 
       .notification-popup.show {
         display: block;
-        animation: slideUp 0.5s ease;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
       }
 
-      @keyframes slideUp {
-        from {
-          opacity: 0;
-          transform: translateX(-50%) translateY(20px);
-        }
+      .notification-popup p {
+        color: #e0e0e0;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0 0 25px 0;
+        text-align: center;
+      }
 
-        to {
-          opacity: 1;
-          transform: translateX(-50%) translateY(0);
-        }
+      .notification-actions {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
       }
 
       .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        background: none;
+        background: linear-gradient(135deg, #ff8300 0%, #e67600 100%);
+        color: white;
         border: none;
-        color: #ff8300;
-        font-size: 24px;
+        border-radius: 8px;
+        padding: 12px 30px;
+        font-size: 1rem;
+        font-weight: 600;
         cursor: pointer;
-        width: 30px;
-        height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
         transition: all 0.3s ease;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        min-width: 140px;
+      }
+
+      .close-btn:hover {
+        background: linear-gradient(135deg, #e67600 0%, #cc6a00 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(255, 131, 0, 0.3);
+      }
+
+      .close-btn:active {
+        transform: translateY(0);
       }
 
       /* Hidden helper */
@@ -288,6 +325,15 @@
 
         .countdown-container {
           padding: 30px 20px;
+        }
+
+        .notification-popup {
+          padding: 25px 20px;
+        }
+
+        .close-btn {
+          padding: 10px 25px;
+          min-width: 120px;
         }
       }
 
@@ -321,15 +367,21 @@
         .page-header {
           padding: 12px 16px;
         }
-      }
 
-      /* Easter egg hint */
-      .easter-egg-hint {
-        color: rgba(255, 131, 0, 0.5);
-        font-size: 0.8rem;
-        margin-top: 40px;
-        font-style: italic;
-        text-align: center;
+        .notification-popup {
+          padding: 20px 15px;
+          width: 95%;
+        }
+
+        .notification-popup p {
+          font-size: 0.95rem;
+        }
+
+        .close-btn {
+          padding: 10px 20px;
+          font-size: 0.95rem;
+          min-width: 110px;
+        }
       }
     </style>
     <!-- Favicon for all browsers -->
@@ -415,9 +467,12 @@
       </div>
     </div>
     <!-- Notification Popup -->
+    <div class="popup-overlay" id="popupOverlay"></div>
     <div class="notification-popup" id="speculationNotice">
       <p>This countdown is speculative, created by the HEAT Labs Team based on the dates of the last two public alpha playtests, and is not an official announcement. The actual release date of World of Tanks: HEAT or its next public playtest has not yet been confirmed.</p>
-      <button class="close-btn" id="closeNotice">&times;</button>
+      <div class="notification-actions">
+        <button class="close-btn" id="closeNotice">I Understand</button>
+      </div>
     </div>
     <script src="countdown.js"></script>
     <script src="window-check.js"></script>

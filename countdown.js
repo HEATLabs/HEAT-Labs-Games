@@ -12,22 +12,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Show notification popup
     function showNotification() {
-        // Only show if not previously dismissed
-        if (!localStorage.getItem('noticeDismissed')) {
-            setTimeout(() => {
-                speculationNotice.classList.add('show');
-            }, 1000);
-        }
+        setTimeout(() => {
+            speculationNotice.classList.add('show');
+            // Add overlay
+            document.getElementById('popupOverlay').classList.add('active');
+        }, 500);
     }
 
     // Close notification popup
     function closeNotification() {
         speculationNotice.classList.remove('show');
+        // Remove overlay
+        document.getElementById('popupOverlay').classList.remove('active');
         localStorage.setItem('noticeDismissed', 'true');
     }
 
     // Event listener for notification close button
     closeNoticeBtn.addEventListener('click', closeNotification);
+
+    // Close when clicking overlay
+    document.getElementById('popupOverlay').addEventListener('click', closeNotification);
 
     // Track typed characters for "alpha3" easter egg
     let typedChars = [];
