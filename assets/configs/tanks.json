@@ -241,16 +241,6 @@
     },
     {
         "id": 25,
-        "state": "hidden",
-        "name": "T-55 Enigma",
-        "slug": "t-55-enigma",
-        "nation": "USSR",
-        "type": "Unknown",
-        "class": "Only for Bots",
-        "image": "../assets/images/tanks/t-55-enigma/upscaled_t-55-enigma.webp"
-    },
-    {
-        "id": 26,
         "state": "displayed",
         "name": "XM1-90",
         "slug": "xm1-90",
@@ -260,7 +250,7 @@
         "image": "../assets/images/tanks/xm1-90/full_xm1-90.webp"
     },
     {
-        "id": 27,
+        "id": 26,
         "state": "displayed",
         "name": "XM1-V",
         "slug": "xm1-v",
@@ -270,7 +260,7 @@
         "image": "../assets/images/tanks/xm1-v/upscaled_xm1-v.webp"
     },
     {
-        "id": 28,
+        "id": 27,
         "state": "displayed",
         "name": "XM808 Twister",
         "slug": "xm808-twister",
@@ -278,15 +268,5 @@
         "type": "Assault",
         "class": "To Be Released",
         "image": "../assets/images/tanks/xm808-twister/upscaled_xm808-twister.webp"
-    },
-    {
-        "id": 29,
-        "state": "hidden",
-        "name": "AMX-10 RC",
-        "slug": "amx-10-rc",
-        "nation": "France",
-        "type": "Unknown",
-        "class": "Hinted in Trailer",
-        "image": "../assets/images/tanks/amx-10-rc/upscaled_amx-10-rc.webp"
     }
 ]
