@@ -49,20 +49,26 @@
             await discordSDK.ready();
             console.log('[Discord RPC] Discord SDK ready!');
 
-            const {
-                code
-            } = await discordSDK.commands.authorize({
-                client_id: CONFIG.CLIENT_ID,
-                response_type: 'code',
-                state: '',
-                prompt: 'none', // Don't show auth dialog
-                scope: [
-                    'identify',
-                    'rpc.activities.write' // Required for Rich Presence
-                ],
-            });
+            try {
+                const {
+                    code
+                } = await discordSDK.commands.authorize({
+                    client_id: CONFIG.CLIENT_ID,
+                    response_type: 'code',
+                    state: '',
+                    prompt: 'none', // Don't show auth dialog
+                    scope: [
+                        'identify',
+                        'guilds',
+                        'rpc.activities.write' // Required for Rich Presence
+                    ],
+                });
 
-            console.log('[Discord RPC] Authorization successful');
+                console.log('[Discord RPC] Authorization successful');
+            } catch (authError) {
+                console.warn('[Discord RPC] Authorization skipped:', authError.message);
+                console.log('[Discord RPC] Continuing with Activity context...');
+            }
 
             isInitialized = true;
             return true;
