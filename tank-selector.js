@@ -490,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function() {
         spinCount.textContent = '0';
 
         // Set initial placeholder state
-        updateResultPlaceholder('Let fate choose a tank for you!', 'Click "Spin the Wheel" to start', 'fas fa-question-circle');
+        updateResultPlaceholder('Let fate choose a tank for you!', 'Click Spin the Wheel to begin or press SPACE', 'fas fa-dice');
 
         // Load tank data
         const tankData = await fetchTankData();
