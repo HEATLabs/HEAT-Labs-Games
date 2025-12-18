@@ -24,14 +24,14 @@
 	</url>
 	<!-- Tier List Page -->
 	<url>
-		<loc>https://games.heatlabs.netgames/tierlist</loc>
+		<loc>https://games.heatlabs.net/games/tierlist</loc>
 		<lastmod>2025-12-04</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
 	</url>
 	<!-- Wordle Page -->
 	<url>
-		<loc>https://games.heatlabs.netgames/wordle</loc>
+		<loc>https://games.heatlabs.net/games/wordle</loc>
 		<lastmod>2025-12-04</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.8</priority>
