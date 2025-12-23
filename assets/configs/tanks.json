@@ -132,16 +132,6 @@
     {
         "id": 14,
         "state": "displayed",
-        "name": "M60A3E2 Bot",
-        "slug": "m60a3e2-bot",
-        "nation": "USA",
-        "type": "Defender",
-        "class": "Only for Bots",
-        "image": "../assets/images/tanks/m60a3e2-bot/upscaled_m60a3e2-bot.webp"
-    },
-    {
-        "id": 15,
-        "state": "displayed",
         "name": "M60E2",
         "slug": "m60e2",
         "nation": "USA",
@@ -150,7 +140,7 @@
         "image": "../assets/images/tanks/m60e2/upscaled_m60e2.webp"
     },
     {
-        "id": 16,
+        "id": 15,
         "state": "displayed",
         "name": "XM551",
         "slug": "xm551",
@@ -160,7 +150,7 @@
         "image": "../assets/images/tanks/xm551/upscaled_xm551.webp"
     },
     {
-        "id": 17,
+        "id": 16,
         "state": "displayed",
         "name": "Object 279",
         "slug": "object-279",
@@ -170,7 +160,7 @@
         "image": "../assets/images/tanks/object-279/upscaled_object-279.webp"
     },
     {
-        "id": 18,
+        "id": 17,
         "state": "displayed",
         "name": "Object 287",
         "slug": "object-287",
@@ -180,7 +170,7 @@
         "image": "../assets/images/tanks/object-287/upscaled_object-287.webp"
     },
     {
-        "id": 19,
+        "id": 18,
         "state": "displayed",
         "name": "PTZ-89C",
         "slug": "ptz89c",
@@ -190,7 +180,7 @@
         "image": "../assets/images/tanks/ptz89c/upscaled_ptz89c.webp"
     },
     {
-        "id": 20,
+        "id": 19,
         "state": "displayed",
         "name": "T-62AV",
         "slug": "t-62av",
@@ -200,7 +190,7 @@
         "image": "../assets/images/tanks/t-62av/upscaled_t-62av.webp"
     },
     {
-        "id": 21,
+        "id": 20,
         "state": "displayed",
         "name": "T-64A",
         "slug": "t-64a",
@@ -210,7 +200,7 @@
         "image": "../assets/images/tanks/t-64a/upscaled_t-64a.webp"
     },
     {
-        "id": 22,
+        "id": 21,
         "state": "displayed",
         "name": "T-62MS",
         "slug": "t-62ms",
@@ -220,7 +210,7 @@
         "image": "../assets/images/tanks/t-62ms/upscaled_t-62ms.webp"
     },
     {
-        "id": 23,
+        "id": 22,
         "state": "displayed",
         "name": "T-72AU",
         "slug": "t-72au",
@@ -230,7 +220,7 @@
         "image": "../assets/images/tanks/t-72au/upscaled_t-72au.webp"
     },
     {
-        "id": 24,
+        "id": 23,
         "state": "displayed",
         "name": "T-72B",
         "slug": "t-72b",
@@ -240,7 +230,7 @@
         "image": "../assets/images/tanks/t-72b/upscaled_t-72b.webp"
     },
     {
-        "id": 25,
+        "id": 24,
         "state": "displayed",
         "name": "XM1-90",
         "slug": "xm1-90",
@@ -250,7 +240,7 @@
         "image": "../assets/images/tanks/xm1-90/full_xm1-90.webp"
     },
     {
-        "id": 26,
+        "id": 25,
         "state": "displayed",
         "name": "XM1-V",
         "slug": "xm1-v",
@@ -260,7 +250,7 @@
         "image": "../assets/images/tanks/xm1-v/upscaled_xm1-v.webp"
     },
     {
-        "id": 27,
+        "id": 26,
         "state": "displayed",
         "name": "XM808 Twister",
         "slug": "xm808-twister",
