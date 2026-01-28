@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Target date: February 05, 2026 at 12:00:00 UTC
-    const targetDate = new Date(2026, 2, 5, 12, 0, 0);
+    // Target date: February 15, 2026 at 12:00:00 UTC
+    const targetDate = new Date(2026, 1, 15, 12, 0, 0);
 
     // DOM Elements
     const countdownTimer = document.querySelector('.countdown-timer');
